@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url('./assets/fonts/Oswald.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ThroughTheNight';
+  src: url('./assets/fonts/ThroughTheNight.regular.ttf') format('truetype');
+}
+
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -12,7 +23,8 @@ html {
 }
 
 :root{
-    --black: #000;
+    --black: #242424;
     --grey: #D9D9D9;
-    --myfont: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    --Oswald: 'Oswald', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    --ThroughTheNight: 'ThroughTheNight', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }

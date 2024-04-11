@@ -1,23 +1,20 @@
 import "./App.css";
 import { Intro } from "./Pages/Intro";
 import { AudioPlayer } from "./components/AudioPlayer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {Instrucciones} from "./Pages/Instrucciones"
 
 function App() {
   return (
-    <div>
-      <Intro />
-      <AudioPlayer />
-    </div>
-    /* <Router>
+    <Router>
       <div>
-        <AudioPlayer /> tendremos que hacer algo similar a esto con el audioplayer fuera del routes para que no se pare la reproducción
+        <AudioPlayer />
         <Routes>
-          <Route path="/yoquese" element={<yoquese />} />
-          <Route path="/losabráParry" element={<Parry />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Intro />} />
+          <Route path="/instrucciones" element={<Instrucciones />} />
         </Routes>
       </div>
-    </Router> */
+    </Router>
   );
 }
 

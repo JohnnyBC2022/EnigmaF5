@@ -1,0 +1,66 @@
+.mainInstructions {
+    background: url(../assets/images/collageWithoutLogo.jpg);
+    height: 100vh;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .paper{
+    background: url(../assets/images/paperInstructions.png);
+    padding: 10rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 80vh;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    justify-content: center;
+    color: var(--black);
+    font-family: var(--ThroughTheNight);
+  }
+  
+  .paper h1{
+    margin-bottom: 1rem;
+    font-size: 2.4rem;
+    text-decoration: underline;
+  }
+
+  .paper p, ul{
+    font-size: 1.6rem;
+    padding: 0.5rem;
+  }
+
+  .paper li{
+    list-style: square;
+  }
+
+  .paper .buttonContainer{
+    align-self: flex-end;
+  }
+
+  .paper button{
+    display: inline-block;
+    margin: 1.5rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 2px var(--black);
+    padding: 0.5rem 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: var(--Oswald);
+  }
+  
+  .paper button:hover{
+    border-bottom: solid 2px transparent;
+
+  }
+
+ 

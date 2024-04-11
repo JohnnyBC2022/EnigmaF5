@@ -1,5 +1,5 @@
-.main {
-  background: url(../assets/INTRO-collage-logo.jpg);
+.mainIntro {
+  background: url(../assets/images/collageIntro.jpg);
   height: 100vh;
   max-width: 100%;
   background-size: cover;
@@ -20,6 +20,7 @@
   border: solid 0.3rem var(--grey);
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  font-family: var(--Oswald);
 }
 
 .startBtn:hover{
