@@ -1,7 +1,32 @@
 import "./Prueba01.css";
 import Nazis1 from "../../assets/images/nazis1.png";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Prueba01() {
+  const [inputValue, setInputValue] = useState("");
+
+  const navigate = useNavigate();
+
+  const runElizaError = () => {
+    navigate("/eliza-error");
+  };
+
+  const handleChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleSend = (e) => {
+    e.preventDefault();
+    const password = inputValue.toLowerCase();
+
+    if (password === "enigma") {
+      runElizaError();
+    } else {
+      console.log("funcionalidad por implementar");
+    }
+  };
+
   return (
     <main className="prueba01-container">
       <section className="instructions-01">
@@ -23,9 +48,17 @@ export default function Prueba01() {
         <form className="answer-form">
           <div className="input-container">
             <label htmlFor="answer">Introducid vuestra respuesta:</label>
-            <input type="text" name="answer" id="answer" />
+            <input
+              type="text"
+              name="answer"
+              id="answer"
+              value={inputValue}
+              onChange={handleChange}
+            />
           </div>
-          <button className="send-button">ENVIAR</button>
+          <button className="send-button" onClick={handleSend}>
+            ENVIAR
+          </button>
         </form>
       </section>
       <aside className="image-container">

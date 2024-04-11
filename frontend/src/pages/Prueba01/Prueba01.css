@@ -19,8 +19,8 @@
 
 .text-container p {
   font-size: 1.5rem;
-  letter-spacing: 1px;
-  word-spacing: 1px;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.1rem;
   font-family: var(--ThroughTheNight);
   margin-bottom: 3rem;
 }
@@ -59,9 +59,8 @@
 }
 
 .input-container input:focus {
-    border: #993f2a solid 3px;
+  border: #993f2a solid 3px;
 }
-
 
 .send-button {
   width: 20rem;
@@ -73,6 +72,7 @@
   font-weight: 700;
   letter-spacing: 1px;
   cursor: pointer;
+  transition: border 0.5s, color 0.5s;
 }
 
 .send-button:hover {
