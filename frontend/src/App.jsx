@@ -1,10 +1,12 @@
-import { Intro } from "./pages/Intro";
+
+import { Intro } from "./pages/Intro/Intro";
 import { AudioPlayer } from "./components/AudioPlayer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {Instrucciones} from "./pages/Instrucciones"
+import { Instrucciones } from "./pages/Instrucciones/Instrucciones";
 import Prueba01 from "./pages/Prueba01/Prueba01";
 import ElizaError from "./pages/ElizaError/ElizaError";
 import "./App.css";
+
 
 
 function App() {
@@ -20,7 +22,6 @@ function App() {
         </Routes>
       </div>
     </Router>
-
   );
 }
 
