@@ -20,7 +20,7 @@ export default function Prueba01() {
           </p>
           <p>¿Cómo se llamaba la máquina que realizaba estas operaciones?</p>
         </span>
-        <form className="answer-container">
+        <form className="answer-form">
           <div className="input-container">
             <label htmlFor="answer">Introducid vuestra respuesta:</label>
             <input type="text" name="answer" id="answer" />
