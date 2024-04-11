@@ -1,15 +1,24 @@
-import './App.css'
-import AudioPlayer from './components/AudioPlayer'
+import "./App.css";
+import { Intro } from "./Pages/Intro";
+import { AudioPlayer } from "./components/AudioPlayer";
 
 function App() {
-  
-
   return (
     <div>
-      Hola, soy Parry y estoy muy loco que cuando voy a un hotel, hago la cama.
-      <AudioPlayer/>
+      <Intro />
+      <AudioPlayer />
     </div>
-  )
+    /* <Router>
+      <div>
+        <AudioPlayer /> tendremos que hacer algo similar a esto con el audioplayer fuera del routes para que no se pare la reproducción
+        <Routes>
+          <Route path="/yoquese" element={<yoquese />} />
+          <Route path="/losabráParry" element={<Parry />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </Router> */
+  );
 }
 
-export default App
+export default App;
