@@ -28,3 +28,7 @@ html {
     --Oswald: 'Oswald', system-ui, Avenir, Helvetica, Arial, sans-serif;
     --ThroughTheNight: 'ThroughTheNight', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+input:focus {
+  outline: none;
+}
