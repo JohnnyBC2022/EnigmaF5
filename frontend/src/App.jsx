@@ -1,8 +1,11 @@
+
 import { Intro } from "./pages/Intro/Intro";
 import { AudioPlayer } from "./components/AudioPlayer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {Instrucciones} from "./Pages/Instrucciones"
+import { Instrucciones } from "./pages/Instrucciones/Instrucciones";
 import Prueba01 from "./pages/Prueba01/Prueba01";
+import './App.css';
+
 
 function App() {
   return (
