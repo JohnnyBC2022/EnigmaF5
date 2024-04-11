@@ -1,7 +1,7 @@
-import { Intro } from "./Pages/Intro";
+import { Intro } from "./pages/Intro";
 import { AudioPlayer } from "./components/AudioPlayer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {Instrucciones} from "./Pages/Instrucciones"
+import {Instrucciones} from "./pages/Instrucciones"
 import Prueba01 from "./pages/Prueba01/Prueba01";
 
 function App() {
