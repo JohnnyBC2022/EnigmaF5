@@ -58,6 +58,11 @@
   font-family: var(--Oswald);
 }
 
+.input-container input:focus {
+    border: #993f2a solid 3px;
+}
+
+
 .send-button {
   width: 20rem;
   height: 5rem;
