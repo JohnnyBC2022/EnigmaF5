@@ -1,11 +1,20 @@
-import "./App.css";
-import Prueba01 from "./pages/Prueba01/Prueba01";
+import { Intro } from "./Pages/Intro";
+import { AudioPlayer } from "./components/AudioPlayer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {Instrucciones} from "./Pages/Instrucciones"
 
 function App() {
   return (
-    <>
-      <Prueba01 />
-    </>
+    <Router>
+      <div>
+        <AudioPlayer />
+        <Routes>
+          <Route path="/" element={<Intro />} />
+          <Route path="/instrucciones" element={<Instrucciones />} />
+        </Routes>
+      </div>
+    </Router>
+
   );
 }
 
