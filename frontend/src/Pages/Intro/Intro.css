@@ -1,5 +1,5 @@
 .mainIntro {
-  background: url(../assets/images/collageIntro.jpg);
+  background: url(../../assets/images/collageIntro.jpg);
   height: 100vh;
   max-width: 100%;
   background-size: cover;
@@ -13,17 +13,16 @@
 .startBtn {
   color: var(--grey);
   background-color: transparent;
-  padding: 1rem;
+  padding: 1rem 2rem;
   text-transform: uppercase;
   font-size: 4rem;
-  margin-bottom: 5rem;
-  border: solid 0.3rem var(--grey);
+  margin-bottom: 2.5rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
   font-family: var(--Oswald);
+  border: solid 0.3rem var(--grey);
 }
 
-.startBtn:hover{
-    transform: scale(1.1);
+.startBtn:hover {
+  transform: scale(1.1);
 }
-

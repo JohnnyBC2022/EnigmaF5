@@ -1,0 +1,84 @@
+.mainInstructions {
+  background: url(../../assets/images/collageWithoutLogo.jpg);
+  height: 100vh;
+  max-width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paper {
+  background: url(../../assets/images/paperInstructions.png);
+  margin: 7rem;
+  padding: 5rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100vh;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  justify-content: center;
+  color: var(--black);
+  font-family: var(--ThroughTheNight);
+}
+
+.paper h1 {
+  margin-bottom: 1rem;
+  font-size: 2.4rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.paper p,
+li {
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.1rem;
+  text-align: justify;
+}
+
+
+
+.paper .buttonContainer {
+  align-self: flex-end;
+}
+
+.paper .nextButton {
+  display: inline-block;
+  margin: 1.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 2px var(--black);
+  padding: 0.5rem 0.5rem;
+  font-weight: bold;
+  font-family: var(--Oswald);
+  font-size: 2rem;
+  text-transform: uppercase;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.paper .nextButton:hover {
+  border-bottom: solid 2px transparent;
+}
+
+.paper li{
+  display: flex;
+}
+
+.paper .icon-section{
+  display: inline-block;
+  padding-top: 0.5rem;
+  width: 3rem;
+  font-size: 1.8rem;
+}
+
+.paper li p{
+  width: 95%;
+}
