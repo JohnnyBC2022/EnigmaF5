@@ -18,12 +18,13 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .text-container {
   width: 40rem;
   text-align: justify;
+  margin-bottom: 6rem;
 }
 
 .text-container p {
@@ -54,7 +55,7 @@ input:focus {
 
 .input-container input {
     width: 40rem;
-    height: 4rem;
+    height: 5rem;
     background-color: rgba(0, 0, 0, 0);
     border: #000 solid 3px;
     font-size: 2rem;
@@ -63,7 +64,7 @@ input:focus {
 
 .send-button {
     width: 20rem;
-    height: 4rem;
+    height: 5rem;
     background-color: rgba(0, 0, 0, 0);
     border: #000 solid 3px;
     font-size: 2rem;
