@@ -1,13 +1,12 @@
-import './App.css'
+import "./App.css";
+import Prueba01 from "./pages/Prueba01/Prueba01";
 
 function App() {
-  
-
   return (
-    <div>
-      Hola, soy Parry y estoy muy loco que cuando voy a un hotel, hago la cama.
-    </div>
-  )
+    <>
+      <Prueba01 />
+    </>
+  );
 }
 
-export default App
+export default App;
