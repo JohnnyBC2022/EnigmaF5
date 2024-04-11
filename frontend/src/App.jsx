@@ -3,6 +3,7 @@ import { AudioPlayer } from "./components/AudioPlayer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {Instrucciones} from "./pages/Instrucciones"
 import Prueba01 from "./pages/Prueba01/Prueba01";
+import "./App.css";
 
 function App() {
   return (
