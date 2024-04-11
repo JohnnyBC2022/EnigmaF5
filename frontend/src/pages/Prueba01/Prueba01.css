@@ -12,14 +12,17 @@
 }
 
 .text-container {
-  width: 40rem;
+  width: 50rem;
   text-align: justify;
   margin-bottom: 6rem;
 }
 
 .text-container p {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-family: var(--ThroughTheNight);
+    margin-bottom: 3rem;
 }
 
 .instructions-01 {
@@ -34,7 +37,8 @@
 }
 
 .answer-container label {
-    font-size:  1.5rem;
+    font-size:  2rem;
+    font-family: var(--Oswald);
 }
 
 .input-container {
@@ -50,6 +54,7 @@
     border: #000 solid 3px;
     font-size: 2rem;
     padding-left: 1rem;
+    font-family: var(--Oswald);
 }
 
 .send-button {
