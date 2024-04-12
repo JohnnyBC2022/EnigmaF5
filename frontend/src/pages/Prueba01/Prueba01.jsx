@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Prueba01() {
   const [inputValue, setInputValue] = useState("");
+  const [error, setError] = useState(false);
 
   const navigate = useNavigate();
 
@@ -59,6 +60,7 @@ export default function Prueba01() {
           <button className="send-button" onClick={handleSend}>
             ENVIAR
           </button>
+          {error && <h6 className="error-message">Respuesta incorrecta</h6>}
         </form>
       </section>
       <aside className="image-container">

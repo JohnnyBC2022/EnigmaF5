@@ -76,8 +76,8 @@
 }
 
 .send-button:hover {
-  border: #993f2a solid 3px;
-  color: #993f2a;
+  border: var(--dark-red) solid 3px;
+  color: var(--dark-red);
 }
 
 .image-container {
@@ -87,4 +87,10 @@
 .background-image {
   object-fit: cover;
   width: 100%;
+}
+
+.error-message {
+  color: var(--dark-red);
+  font-size: 2rem;
+  font-family: var(--Oswald);
 }
