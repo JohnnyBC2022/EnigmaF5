@@ -8,6 +8,11 @@
   src: url("./assets/fonts/ThroughTheNight.regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "DotGothic";
+  src: url("./assets/fonts/DotGothic16-Regular.ttf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -29,6 +34,7 @@ html {
   --Oswald: "Oswald", system-ui, Avenir, Helvetica, Arial, sans-serif;
   --ThroughTheNight: "ThroughTheNight", system-ui, Avenir, Helvetica, Arial,
     sans-serif;
+  --DotGothic: "DotGothic", system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 input:focus {
