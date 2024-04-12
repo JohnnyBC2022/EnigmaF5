@@ -24,7 +24,7 @@ export default function Prueba01() {
     if (password === "enigma") {
       runElizaError();
     } else {
-      console.log("funcionalidad por implementar");
+      setError(true);
     }
   };
 
@@ -60,7 +60,7 @@ export default function Prueba01() {
           <button className="send-button" onClick={handleSend}>
             ENVIAR
           </button>
-          {error && <h6 className="error-message">Respuesta incorrecta</h6>}
+          {error && <h6 className="error-message">* Respuesta incorrecta</h6>}
         </form>
       </section>
       <aside className="image-container">
