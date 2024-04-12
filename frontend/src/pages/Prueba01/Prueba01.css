@@ -52,7 +52,7 @@
   width: 40rem;
   height: 5rem;
   background-color: rgba(0, 0, 0, 0);
-  border: #000 solid 3px;
+  border: var(--black) solid 3px;
   font-size: 2rem;
   padding-left: 1rem;
   font-family: var(--Oswald);
@@ -66,7 +66,7 @@
   width: 20rem;
   height: 5rem;
   background-color: rgba(0, 0, 0, 0);
-  border: #000 solid 3px;
+  border: var(--black) solid 3px;
   font-size: 2rem;
   font-family: var(--Oswald);
   font-weight: 700;
