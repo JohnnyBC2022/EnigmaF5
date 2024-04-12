@@ -1,5 +1,5 @@
 .mainIntro {
-  background: url(../../assets/images/collageIntro.jpg);
+  background: url(../../assets/images/collageWithoutLogo.jpg);
   height: 100vh;
   max-width: 100%;
   background-size: cover;
@@ -10,17 +10,44 @@
   align-items: flex-end;
 }
 
+.mainPaper {
+  background: url(../../assets/images/paperInstructions.png);
+  margin: 7rem;
+  padding: 5rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100vh;
+  height: 90vh;
+  
+}
+
+.paperContain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.paperContain img{
+  margin: 10rem auto;
+  height: 50%;
+  display: block;
+}
+
 .startBtn {
-  color: var(--grey);
+  color: var(--black);
+  display: inline-block;
   background-color: transparent;
   padding: 1rem 2rem;
   text-transform: uppercase;
   font-size: 4rem;
-  margin-bottom: 2.5rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
   font-family: var(--Oswald);
-  border: solid 0.3rem var(--grey);
+  border: solid 0.3rem var(--black);
 }
 
 .startBtn:hover {

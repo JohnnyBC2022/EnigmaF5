@@ -1,5 +1,12 @@
 import "./Instrucciones.css";
+import { useNavigate } from "react-router-dom";
+
 export const Instrucciones = () => {
+  const navigate = useNavigate();
+
+  const handleStartButtonClick = () => {
+    navigate("/instrucciones2");
+  };
   return (
     <div className="mainInstructions">
       <div className="paper">
@@ -43,7 +50,7 @@ export const Instrucciones = () => {
           </li>
         </ul>
         <div className="buttonContainer">
-          <button className="nextButton">Siguiente</button>
+          <button onClick={handleStartButtonClick} className="nextButton">Siguiente</button>
         </div>
       </div>
     </div>

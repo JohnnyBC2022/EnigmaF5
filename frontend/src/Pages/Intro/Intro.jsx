@@ -10,9 +10,14 @@ export const Intro = () => {
 
   return (
     <div className="mainIntro">
-      <button onClick={handleStartButtonClick} className="startBtn">
-        Empezar
-      </button>
+      <div className="mainPaper">
+        <div className="paperContain">
+          <img src="../../../public/logoEnigma.svg" alt="" />
+          <button onClick={handleStartButtonClick} className="startBtn">
+            empezar
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

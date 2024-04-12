@@ -1,4 +1,4 @@
-.mainInstructions {
+.mainInstructions, .mainInstrucciones2 {
   background: url(../../assets/images/collageWithoutLogo.jpg);
   height: 100vh;
   max-width: 100%;
@@ -34,7 +34,7 @@
   text-transform: uppercase;
 }
 
-.paper p,
+.paper p, 
 li {
   font-size: 1.6rem;
   padding: 0.5rem;
@@ -43,7 +43,20 @@ li {
   text-align: justify;
 }
 
+.paperContain p{
+  font-size: 2.4rem;
+  margin: 3rem;
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.1rem;
+  text-align: justify;
+  color: var(--black);
+  font-family: var(--ThroughTheNight);
+}
 
+.paperContain span{
+  text-decoration: underline;
+}
 
 .paper .buttonContainer {
   align-self: flex-end;
