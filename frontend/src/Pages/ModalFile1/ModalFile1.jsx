@@ -5,7 +5,7 @@ export const ModalFile1 = ({ closeModal }) => {
       <div className="modalOverlay" onClick={closeModal}>
         <div className="modalContent" onClick={(e) => e.stopPropagation()}>
           <button className="closeModalButton" onClick={closeModal}>
-            X
+            <p>X</p>
           </button>
         </div>
       </div>
