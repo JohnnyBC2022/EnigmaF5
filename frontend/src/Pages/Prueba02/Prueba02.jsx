@@ -2,6 +2,12 @@ import "./Prueba02.css";
 import Bombe from "../../assets/images/Bombe.png";
 
 export default function Prueba02() {
+
+    const handleSend = (e)=>{
+        e.preventDefault();
+        alert("Respuesta incorrecta.\n\nREVISA EL MANUAL");
+    }
+
   return (
     <main className="prueba-container">
       <section className="instructions-02">
@@ -34,7 +40,7 @@ export default function Prueba02() {
                 <input type="radio" name="color" id="red" />
               </div>
             </section>
-            <button className="send-button">ENVIAR</button>
+            <button className="send-button" onClick={handleSend}>ENVIAR</button>
           </form>
           <div className="hint-container">
             <div className="square">i</div>
