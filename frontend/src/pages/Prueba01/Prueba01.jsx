@@ -29,7 +29,7 @@ export default function Prueba01() {
   };
 
   return (
-    <main className="prueba01-container">
+    <main className="prueba-container">
       <section className="instructions-01">
         <span className="text-container">
           <p>ANTES DE EMPEZAR VAMOS A VALORAR VUESTRAS CAPACIDADES</p>
