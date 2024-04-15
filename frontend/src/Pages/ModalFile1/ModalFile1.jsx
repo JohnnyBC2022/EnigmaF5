@@ -1,10 +1,10 @@
 import "./ModalFile1.css";
 
-export const ModalFile1 = ({ closeModal }) => {
+export const ModalFile1 = ({ closeModalFile1 }) => {
     return (
-      <div className="modalOverlay" onClick={closeModal}>
-        <div className="modalContent" onClick={(e) => e.stopPropagation()}>
-          <button className="closeModalButton" onClick={closeModal}>
+      <div className="modalOverlay1" onClick={closeModalFile1}>
+        <div className="modalContent1" onClick={(e) => e.stopPropagation()}>
+          <button className="closeModalButton1" onClick={closeModalFile1}>
             <p>X</p>
           </button>
         </div>

@@ -1,4 +1,4 @@
-.modalOverlay {
+.modalOverlay1 {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-.modalContent {
+.modalContent1 {
   background: url(../../../src/assets/images/file1Img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,7 +21,7 @@
   height: 100%;
 }
 
-.closeModalButton{
+.closeModalButton1{
     position: absolute;
     width: 5rem;
     top:0;
@@ -35,7 +35,7 @@
     transition: 0.3s ease-in-out;
 }
 
-.closeModalButton p{
+.closeModalButton1 p{
     border: solid 0.1rem var(--white);
     padding: 0.3rem;
 }
