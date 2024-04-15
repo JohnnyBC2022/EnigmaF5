@@ -1,6 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import "./ElizaError.css";
+import { useEffect } from "react";
 
 export default function ElizaError() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const redirectTimeout = setTimeout(() => {
+      navigate("/prueba02");
+    }, 10000);
+
+    return () => clearTimeout(redirectTimeout);
+  }, [navigate]);
+
   return (
     <main className="error-eliza-container">
       <div className="error-eliza">

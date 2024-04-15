@@ -7,6 +7,7 @@ import { Instrucciones2 } from "./pages/Instrucciones/Instrucciones2";
 import Prueba01 from "./pages/Prueba01/Prueba01";
 import ElizaError from "./pages/ElizaError/ElizaError";
 import "./App.css";
+import Prueba02 from "./pages/Prueba02/Prueba02";
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/instrucciones2" element={<Instrucciones2 />} />
           <Route path="/prueba01" element={<Prueba01 />} />
           <Route path="/eliza-error" element={<ElizaError />} />
+          <Route path="/prueba02" element={ <Prueba02 />} />
         </Routes>
       </div>
     </Router>
