@@ -13,27 +13,21 @@ export default function Prueba02() {
     alert("Respuesta incorrecta.\n\nREVISA EL MANUAL");
   };
 
-  const handleKeyDown = (e) => {
-    setKeysPressed((prevKeys) => [...prevKeys, e.key]);
-    console.log(keysPressed)
-
-    if (
-      keysPressed.includes("Shift") &&
-      keysPressed.includes("F") &&
-      keysPressed.includes("%")
-    ) {
-      navigate("/consola");
-    
-    }
-  };
-
   useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "%") {
+        navigate("/consola");
+      }
+    };
+
     document.addEventListener("keydown", handleKeyDown);
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [keysPressed]);
+  }, [navigate]);
+
+
 
   return (
     <main className="prueba-container">
