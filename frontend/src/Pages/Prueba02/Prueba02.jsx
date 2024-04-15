@@ -19,7 +19,23 @@ export default function Prueba02() {
               colores correcta.
             </p>
           </span>
-          <form action=""></form>
+          <form className="bombe-form">
+            <section>
+              <div className="background-yellow">
+                <input type="radio" name="color" id="yellow" />
+              </div>
+              <div className="background-blue">
+                <input type="radio" name="color" id="blue" />
+              </div>
+              <div className="background-green">
+                <input type="radio" name="color" id="green" />
+              </div>
+              <div className="background-red">
+                <input type="radio" name="color" id="red" />
+              </div>
+            </section>
+            <button className="send-button">ENVIAR</button>
+          </form>
           <div className="hint-container">
             <div className="square">i</div>
             <span className="hint-text">

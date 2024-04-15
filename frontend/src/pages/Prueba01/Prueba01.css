@@ -16,7 +16,7 @@
 .text-container {
   width: 60rem;
   text-align: justify;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 
 .text-container p {
@@ -24,7 +24,7 @@
   letter-spacing: 0.1rem;
   word-spacing: 0.1rem;
   font-family: var(--ThroughTheNight);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .answer-form {
@@ -32,6 +32,7 @@
   flex-direction: column;
   gap: 1rem;
   width: 60rem;
+  margin-top: 3rem;
 }
 
 .answer-form label {
@@ -70,6 +71,7 @@
   letter-spacing: 1px;
   cursor: pointer;
   transition: border 0.5s, color 0.5s;
+  color: var(--black);
 }
 
 .send-button:hover {
