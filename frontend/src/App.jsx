@@ -1,4 +1,3 @@
-
 import { Intro } from "./pages/Intro/Intro";
 import { AudioPlayer } from "./components/AudioPlayer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -7,8 +6,7 @@ import { Instrucciones2 } from "./pages/Instrucciones/Instrucciones2";
 import Prueba01 from "./pages/Prueba01/Prueba01";
 import ElizaError from "./pages/ElizaError/ElizaError";
 import "./App.css";
-
-
+import { Consola } from "./pages/Intro/Consola/Consola";
 
 function App() {
   return (
@@ -21,6 +19,7 @@ function App() {
           <Route path="/instrucciones2" element={<Instrucciones2 />} />
           <Route path="/prueba01" element={<Prueba01 />} />
           <Route path="/eliza-error" element={<ElizaError />} />
+          <Route path="/consola" element={<Consola />} />
         </Routes>
       </div>
     </Router>

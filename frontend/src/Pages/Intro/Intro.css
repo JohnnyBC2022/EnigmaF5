@@ -10,6 +10,7 @@
   align-items: flex-end;
 }
 
+
 .mainPaper {
   background: url(../../assets/images/paperInstructions.png);
   margin: 7rem;
@@ -51,5 +52,6 @@
 }
 
 .startBtn:hover {
-  transform: scale(1.1);
+  color: var(--dark-red);
+  border: solid 0.3rem var(--dark-red)
 }
