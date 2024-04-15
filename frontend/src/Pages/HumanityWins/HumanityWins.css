@@ -1,0 +1,43 @@
+
+.humanityWins__container {
+  background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.humanityWins__container--card {
+    background-color: blue;
+    width: 95rem;
+    height: 55rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .humanityWins__container--cardCentral {
+    background-color: blue;
+    width: 90rem;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.5rem;
+    color: white;
+    font-family: var(--DotGothic);
+    font-size: 2.2rem;
+    border: white 3px solid;
+   padding: 2rem;
+  }
+  .humanityWins__button{
+    background: transparent;
+    padding: 1rem;
+   border: none;
+    color: white;
+    font-size:2rem;
+    font-family: var(--DotGothic);
+    text-transform: uppercase;
+}

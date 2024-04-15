@@ -8,6 +8,8 @@ import ElizaError from "./pages/ElizaError/ElizaError";
 import "./App.css";
 import { Consola } from "./pages/Intro/Consola/Consola";
 import Prueba02 from "./pages/Prueba02/Prueba02";
+import { HumanityWins } from "./pages/HumanityWins/HumanityWins";
+import { FatalError } from "./pages/FatalError/FatalError";
 
 
 
@@ -24,6 +26,10 @@ function App() {
           <Route path="/eliza-error" element={<ElizaError />} />
           <Route path="/consola" element={<Consola />} />
           <Route path="/prueba02" element={ <Prueba02 />} />
+          <Route path="/humanityWins" element={<HumanityWins/>} />
+          <Route path="/fatalError" element={<FatalError/>} />
+
+
         </Routes>
       </div>
     </Router>
