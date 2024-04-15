@@ -19,8 +19,6 @@
   text-decoration: underline;
 }
 
-
-
 .bombe-form {
   display: flex;
   align-items: center;
@@ -43,24 +41,24 @@
   height: 12rem;
 }
 
-.background-yellow{
-    background-image: url("../../assets/images/bombe-rosca-yellow.png");
-    background-size: cover;
+.background-yellow {
+  background-image: url("../../assets/images/bombe-rosca-yellow.png");
+  background-size: cover;
 }
 
 .background-blue {
-    background-image: url("../../assets/images/bombe-rosca-blue.png");
-    background-size: cover;
+  background-image: url("../../assets/images/bombe-rosca-blue.png");
+  background-size: cover;
 }
 
 .background-green {
-    background-image: url("../../assets/images/bombe-rosca-verde.png");
-    background-size: cover;
+  background-image: url("../../assets/images/bombe-rosca-verde.png");
+  background-size: cover;
 }
 
 .background-red {
-    background-image: url("../../assets/images/bombe-rosca-red.png");
-    background-size: cover;
+  background-image: url("../../assets/images/bombe-rosca-red.png");
+  background-size: cover;
 }
 
 .bombe-form input {
@@ -68,15 +66,31 @@
   height: 2rem;
 }
 
+#blue {
+  accent-color: #01586c;
+}
+
+#green {
+  accent-color: #437309;
+}
+
+#red {
+  accent-color: #993c2d;
+}
+
+#yellow {
+  accent-color: #cdab06;
+}
+
 .hint-container {
-    height: 15rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: .5rem;
-    margin-top: 3rem;
-  }
+  height: 15rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
 
 .square {
   background-color: var(--dark-red);
