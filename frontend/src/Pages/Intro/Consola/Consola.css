@@ -1,0 +1,111 @@
+.consoleMain {
+  background-color: var(--black-console);
+  min-width: 100vh;
+  height: 100vh;
+  padding: 5rem;
+  font-family: var(--DotGothic);
+}
+
+.textPath {
+  color: var(--blue-console);
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.fileInfo {
+  color: var(--white);
+  font-size: 2.4rem;
+  display: flex;
+}
+
+.fileInfoLeft {
+  border: solid 1px var(--blue-console);
+  padding: 2rem;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.textC {
+  background-color: var(--green-console);
+  width: 30%;
+  padding-left: 1rem;
+}
+
+.fileInfoRight {
+  border-top: solid 1px var(--blue-console);
+  border-right: solid 1px var(--blue-console);
+  border-bottom: solid 1px var(--blue-console);
+  padding: 3rem;
+  width: 35%;
+}
+
+.fileInfoRight p:first-child {
+  margin-bottom: 1.5rem;
+}
+
+.files {
+  display: flex;
+  text-transform: uppercase;
+}
+
+.filesLeft p {
+  margin-left: 1.5rem;
+  width: 100%;
+  border-left: solid 1px var(--blue-console);
+  border-bottom: solid 1px var(--blue-console);
+}
+
+.filesRight {
+  margin: 1.75rem 2rem;
+}
+
+.filesRight a:visited {
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.consoleC {
+  color: var(--white);
+  font-size: 2.4rem;
+  margin-top: 5rem;
+}
+
+.flicker1 {
+  animation-duration: 2s;
+  animation-name: flicker1;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flicker1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.flicker2 {
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-name: flicker2;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flicker2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

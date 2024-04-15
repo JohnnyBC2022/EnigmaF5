@@ -78,7 +78,8 @@ li {
 }
 
 .paper .nextButton:hover {
-  border-bottom: solid 2px transparent;
+  color: var(--dark-red);
+  border-bottom: solid 2px var(--dark-red);
 }
 
 .paper li{

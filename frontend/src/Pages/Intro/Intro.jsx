@@ -7,7 +7,7 @@ export const Intro = () => {
   const handleStartButtonClick = () => {
     navigate("/instrucciones");
   };
-
+/* To do: change sound */
   return (
     <div className="mainIntro">
       <div className="mainPaper">

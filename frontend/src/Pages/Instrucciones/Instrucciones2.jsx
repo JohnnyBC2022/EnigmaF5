@@ -5,7 +5,7 @@ export const Instrucciones2 = () => {
   const navigate = useNavigate();
 
   const handleStartButtonClick = () => {
-    navigate("/instrucciones2");
+    navigate("/prueba01");
   };
 
   return (
