@@ -1,6 +1,19 @@
 import "./Consola.css";
+import { ModalFile1 } from "../ModalFile1/ModalFile1";
+import { useState } from "react";
+
 
 export const Consola = () => {
+  const [showModalFile1, setShowModalFile1] = useState(false);
+
+  const handleModalFile1Click = () => {
+    setShowModalFile1(true);
+  };
+
+  const closeModalFile1 = () => {
+    setShowModalFile1(false);
+  };
+
   return (
     <div className="consoleMain">
       <p className="textPath">Path: C:\</p>
@@ -13,13 +26,8 @@ export const Consola = () => {
               <p>&nbsp;</p>
             </div>
             <div className="filesRight">
-              <a href="">
-                <p>File 1</p>
-              </a>{" "}
-              {/* cambiar a link */}
-              <a href="">
-                <p>File 2</p>
-              </a>
+              <button onClick={handleModalFile1Click}>File 1</button>
+              <button>File 2</button>
             </div>
           </div>
         </div>
@@ -31,7 +39,12 @@ export const Consola = () => {
           <p className="flicker1">Select a file to continue...</p>
         </div>
       </div>
-      <p className="consoleC">c:\&gt;...<span className="flicker2">|</span></p>
+      <p className="consoleC">
+        c:\&gt;...<span className="flicker2">|</span>
+      </p>
+      {showModalFile1 && (
+        <ModalFile1 closeModal={closeModalFile1}/>
+      )}
     </div>
   );
 };
