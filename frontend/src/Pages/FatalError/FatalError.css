@@ -40,4 +40,5 @@
         font-size:2rem;
         font-family: var(--DotGothic);
         text-transform: uppercase;
+        cursor: pointer;
     }
