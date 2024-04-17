@@ -1,4 +1,5 @@
-.mainInstructions, .mainInstrucciones2 {
+.mainInstructions,
+.mainInstrucciones2 {
   background: url(../../assets/images/collageWithoutLogo.jpg);
   height: 100vh;
   max-width: 100%;
@@ -13,7 +14,7 @@
 .paper {
   background: url(../../assets/images/paperInstructions.png);
   margin: 7rem;
-  padding: 10rem 5rem 5rem 5rem;
+  padding: 12rem 5rem 5rem 5rem;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -21,7 +22,6 @@
   height: 90vh;
   display: flex;
   flex-direction: column;
-  padding-top: 12rem;
   justify-content: center;
   color: var(--black);
   font-family: var(--ThroughTheNight);
@@ -34,7 +34,7 @@
   text-transform: uppercase;
 }
 
-.paper p, 
+.paper p,
 li {
   font-size: 1.7rem;
   padding: 0.5rem;
@@ -43,7 +43,7 @@ li {
   text-align: justify;
 }
 
-.paperContain p{
+.paperContain p {
   font-size: 1.7rem;
   margin: 2rem;
   letter-spacing: 0.1rem;
@@ -53,7 +53,7 @@ li {
   font-family: var(--ThroughTheNight);
 }
 
-.paperContain span{
+.paperContain span {
   text-decoration: underline;
 }
 
@@ -81,21 +81,31 @@ li {
   border-bottom: solid 2px var(--dark-red);
 }
 
-.paper li{
+.paper li {
   display: flex;
 }
 
-.paper .icon-section{
+.paper .icon-section {
   display: inline-block;
   padding-top: 0.5rem;
   width: 3rem;
   font-size: 1.8rem;
 }
 
-.paper li p{
+.paper li p {
   width: 95%;
 }
 
-.paperContain button{
+.paperContain button {
   margin-top: 7rem;
+}
+
+@media screen and (min-width: 1600px) {
+  .paper h1 {
+    margin-bottom: 5rem;
+  }
+
+  .paper {
+    padding: 5rem 8rem;
+  }
 }

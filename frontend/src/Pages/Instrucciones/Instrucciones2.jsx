@@ -21,7 +21,9 @@ export const Instrucciones2 = () => {
               Es el momento de que os presentéis antes de empezar a trabajar
               juntos.
             </span>
-            &nbsp;Una vez hechas las presentaciones estaréis preparados para empezar.
+          </p>
+          <p>
+            Una vez hechas las presentaciones estaréis preparados para empezar.
           </p>
           <button onClick={handleStartButtonClick} className="startBtn">
             ¿Preparados?
