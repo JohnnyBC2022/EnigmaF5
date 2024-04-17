@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Prueba02() {
-  const [keysPressed, setKeysPressed] = useState([]);
+  const [controlPressed, setControlPressed] = useState(false);
+  const [fivePressed, setFivePressed] = useState(false);
 
   const navigate = useNavigate();
 
@@ -14,19 +15,37 @@ export default function Prueba02() {
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.key === "%") {
-        navigate("/consola");
+      if (event.key === "Control") {
+        setControlPressed(true);
+      }
+      if (event.key === "5") {
+        setFivePressed(true);
+      }
+    };
+
+    const handleKeyUp = (event) => {
+      if (event.key === "Control") {
+        setControlPressed(false);
+      }
+      if (event.key === "5") {
+        setFivePressed(false);
       }
     };
 
     document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("keyup", handleKeyUp);
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("keyup", handleKeyUp);
     };
-  }, [navigate]);
+  }, []);
 
-
+  useEffect(() => {
+    if (controlPressed && fivePressed) {
+      navigate("/consola");
+    }
+  }, [controlPressed, fivePressed, navigate]);
 
   return (
     <main className="prueba-container">
@@ -77,8 +96,7 @@ export default function Prueba02() {
           </div>
         </div>
       </section>
-      <aside className="image-container-bombe">
-      </aside>
+      <aside className="image-container-bombe"></aside>
     </main>
   );
 }
