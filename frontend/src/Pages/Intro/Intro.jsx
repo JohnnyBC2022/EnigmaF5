@@ -12,7 +12,7 @@ export const Intro = () => {
     <div className="mainIntro">
       <div className="mainPaper">
         <div className="paperContain">
-          <img src="../../../public/logoEnigma.svg" alt="" />
+          <img src="./logoEnigma.svg" alt="" />
           <button onClick={handleStartButtonClick} className="startBtn">
             empezar
           </button>

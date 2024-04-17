@@ -47,7 +47,8 @@ export const Consola = () => {
         </div>
         <div className="fileInfoRight">
           <p>
-            Welcome to MS-DOS version 9 beta. Copyright 2024.
+            Welcome to QDOS version alpha.
+            <p>Copyright 1968.</p>
             <p>Malibu Artifactual Intelligence, Inc.</p>
           </p>
           <p className="flicker1">Select a file to continue...</p>
