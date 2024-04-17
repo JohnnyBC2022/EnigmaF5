@@ -20,7 +20,7 @@
 }
 
 .text-container p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   letter-spacing: 0.1rem;
   word-spacing: 0.1rem;
   font-family: var(--ThroughTheNight);
@@ -32,7 +32,7 @@
   flex-direction: column;
   gap: 1rem;
   width: 60rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .answer-form label {
@@ -65,7 +65,7 @@
   height: 5rem;
   background-color: rgba(0, 0, 0, 0);
   border: var(--black) solid 3px;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: var(--Oswald);
   font-weight: 700;
   letter-spacing: 1px;
@@ -80,11 +80,10 @@
 }
 
 .image-container {
-  width: 29vw;
-}
-
-.background-image {
-  object-fit: cover;
+  width: 50vw;
+  background-image: url("../../assets/images/nazis2.png");
+  background-size: cover;
+  background-position: center bottom;
   height: 100%;
 }
 

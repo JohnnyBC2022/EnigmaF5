@@ -1,10 +1,10 @@
 import "./Prueba02.css";
-import Bombe from "../../assets/images/Bombe.png";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Prueba02() {
-  const [keysPressed, setKeysPressed] = useState([]);
+  const [controlPressed, setControlPressed] = useState(false);
+  const [fivePressed, setFivePressed] = useState(false);
 
   const navigate = useNavigate();
 
@@ -13,27 +13,39 @@ export default function Prueba02() {
     alert("Respuesta incorrecta.\n\nREVISA EL MANUAL");
   };
 
-  const handleKeyDown = (e) => {
-    setKeysPressed((prevKeys) => [...prevKeys, e.key]);
-    console.log(keysPressed)
-
-    if (
-      keysPressed.includes("Shift") &&
-      keysPressed.includes("F") &&
-      keysPressed.includes("%")
-    ) {
-      navigate("/consola");
-    
-    }
-  };
-
   useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Control") {
+        setControlPressed(true);
+      }
+      if (event.key === "5") {
+        setFivePressed(true);
+      }
+    };
+
+    const handleKeyUp = (event) => {
+      if (event.key === "Control") {
+        setControlPressed(false);
+      }
+      if (event.key === "5") {
+        setFivePressed(false);
+      }
+    };
+
     document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("keyup", handleKeyUp);
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("keyup", handleKeyUp);
     };
-  }, [keysPressed]);
+  }, []);
+
+  useEffect(() => {
+    if (controlPressed && fivePressed) {
+      navigate("/consola");
+    }
+  }, [controlPressed, fivePressed, navigate]);
 
   return (
     <main className="prueba-container">
@@ -43,7 +55,7 @@ export default function Prueba02() {
             <p>
               El MI6, Servicio de Inteligencia Británico, creó una base secreta
               en Bletchley Park, para encontrar la forma de descodificar los
-              mensajes alemanes. Entre el grupo de expertos se encontraba Alan
+              mensajes enviados a través de enigma. Entre el grupo de expertos se encontraba Alan
               Turing, el creador de la máquina Bombe, que pudo descodificar los
               mensajes.
             </p>
@@ -84,9 +96,7 @@ export default function Prueba02() {
           </div>
         </div>
       </section>
-      <aside className="image-container">
-        <img className="background-image" src={Bombe} alt="La máquina Bombe" />
-      </aside>
+      <aside className="image-container-bombe"></aside>
     </main>
   );
 }

@@ -12,26 +12,23 @@ export const Instrucciones = () => {
       <div className="paper">
         <h1>Instrucciones de Juego</h1>
         <p>
-          ¡Bienvenidos! Han sido seleccionados para una misión crucial que
-          determinará el destino del mundo. La tarea consiste en superar una
-          serie de desafíos que pondrán a prueba vuestras habilidades. La
-          cooperación y el trabajo en equipo son la clave para el éxito. Para
-          superar esta misión, debéis tener en cuenta las siguientes
-          instrucciones:
+          ¡Bienvenidos! Habéis sido seleccionados para una misión de vital
+          importancia que definirá el futuro de la humanidad. Vuestro objetivo
+          consistirá en superar una serie de retos donde la colaboración y el
+          trabajo en equipo serán esenciales para el éxito:
         </p>
         <ul>
           <li>
             <span className="icon-section">§</span>
             <p>
-              Solo una persona del grupo compartirá pantalla durante la misión.
+              Sólo una persona del grupo compartirá pantalla durante la misión.
             </p>
           </li>
           <li>
             <span className="icon-section">§</span>
             <p>
               Aseguraos de tomar decisiones grupales y trabajar juntos para
-              resolver cada desafío ya que cada decisión que toméis afectará al
-              resultado de cada prueba.
+              resolver cada desafío.
             </p>
           </li>
           <li>
@@ -45,12 +42,14 @@ export const Instrucciones = () => {
             <span className="icon-section">§</span>
             <p>
               Tras completar cada nivel, debéis anotar los datos relevantes que
-              se deben incluir en la presentación final.
+              serán útiles para la presentación final.
             </p>
           </li>
         </ul>
         <div className="buttonContainer">
-          <button onClick={handleStartButtonClick} className="nextButton">Siguiente</button>
+          <button onClick={handleStartButtonClick} className="nextButton">
+            Siguiente
+          </button>
         </div>
       </div>
     </div>

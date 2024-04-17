@@ -1,5 +1,4 @@
 import "./Prueba01.css";
-import Nazis1 from "../../assets/images/nazis1.png";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -34,17 +33,23 @@ export default function Prueba01() {
         <span className="text-container">
           <p>ANTES DE EMPEZAR VAMOS A VALORAR VUESTRAS CAPACIDADES</p>
           <p>
-            En 1941, durante la II Guerra Mundial, el ejercito nazi inventó una
-            máquina codificadora para poder mandar mensajes entre las tropas y
-            que nadie pudiera descifrarlos. En su momento se creyó que esa
-            máquina era indescifrable.
+            En 1918 un ingeniero alemán patentó una máquina electromecánica
+            capaz de cifrar mensajes mediante un algoritmo de sustitución y así
+            establecer una comunicación segura entre personas que podían estar a
+            miles de kilómetros de distancia.
+          </p>
+          <p>
+            Poco más grande que una caja de zapatos, en su momento se creyó que
+            esta máquina era indescifrable.
           </p>
           <p>
             A través de 5 rotores, 10 cables en un clavijero y la combinación
             del alfabeto, cada 24h se creaban 159 trillones de posibilidades de
             codificación.
           </p>
-          <p>¿Cómo se llamaba la máquina que realizaba estas operaciones?</p>
+          <p className="underscore">
+            ¿Cómo se llamaba la máquina que realizaba estas operaciones?
+          </p>
         </span>
         <form className="answer-form">
           <div className="input-container">
@@ -63,13 +68,7 @@ export default function Prueba01() {
           {error && <h6 className="error-message">* Respuesta incorrecta</h6>}
         </form>
       </section>
-      <aside className="image-container">
-        <img
-          className="background-image"
-          src={Nazis1}
-          alt="Nazis haciendo cosas nazis"
-        />
-      </aside>
+      <aside className="image-container"></aside>
     </main>
   );
 }
