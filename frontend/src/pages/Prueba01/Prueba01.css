@@ -80,11 +80,10 @@
 }
 
 .image-container {
-  width: 29vw;
-}
-
-.background-image {
-  object-fit: cover;
+  width: 50vw;
+  background-image: url("../../assets/images/nazis2.png");
+  background-size: cover;
+  background-position: center bottom;
   height: 100%;
 }
 
