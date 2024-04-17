@@ -55,7 +55,7 @@ export default function Prueba02() {
             <p>
               El MI6, Servicio de Inteligencia Británico, creó una base secreta
               en Bletchley Park, para encontrar la forma de descodificar los
-              mensajes alemanes. Entre el grupo de expertos se encontraba Alan
+              mensajes enviados a través de enigma. Entre el grupo de expertos se encontraba Alan
               Turing, el creador de la máquina Bombe, que pudo descodificar los
               mensajes.
             </p>
