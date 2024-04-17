@@ -1,5 +1,4 @@
 import "./Prueba02.css";
-import Bombe from "../../assets/images/Bombe.png";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -78,8 +77,7 @@ export default function Prueba02() {
           </div>
         </div>
       </section>
-      <aside className="image-container">
-        <img className="background-image" src={Bombe} alt="La máquina Bombe" />
+      <aside className="image-container-bombe">
       </aside>
     </main>
   );

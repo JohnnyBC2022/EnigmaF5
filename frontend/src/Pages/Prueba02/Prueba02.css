@@ -116,3 +116,11 @@
   display: flex;
   align-items: center;
 }
+
+.image-container-bombe {
+  width: 50vw;
+  background-image: url("../../assets/images/Bombe.png");
+  background-size: cover;
+  background-position: center bottom;
+  height: 100%;
+}
