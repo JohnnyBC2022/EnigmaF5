@@ -1,5 +1,4 @@
 import "./ModalFile1.css";
-import ReactImageMagnify from "react-image-magnify";
 import file1Img from "../../assets/images/file1Img.jpg";
 import { ImageMagnifier } from "../../components/ImageMagnifier";
 
