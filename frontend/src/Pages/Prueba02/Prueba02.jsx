@@ -1,12 +1,33 @@
 import "./Prueba02.css";
 import Bombe from "../../assets/images/Bombe.png";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Prueba02() {
+  const [keysPressed, setKeysPressed] = useState([]);
 
-    const handleSend = (e)=>{
-        e.preventDefault();
-        alert("Respuesta incorrecta.\n\nREVISA EL MANUAL");
-    }
+  const navigate = useNavigate();
+
+  const handleSend = (e) => {
+    e.preventDefault();
+    alert("Respuesta incorrecta.\n\nREVISA EL MANUAL");
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "%") {
+        navigate("/consola");
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [navigate]);
+
+
 
   return (
     <main className="prueba-container">
@@ -40,7 +61,9 @@ export default function Prueba02() {
                 <input type="radio" name="color" id="red" />
               </div>
             </section>
-            <button className="send-button" onClick={handleSend}>ENVIAR</button>
+            <button className="send-button" onClick={handleSend}>
+              ENVIAR
+            </button>
           </form>
           <div className="hint-container">
             <div className="square">i</div>
