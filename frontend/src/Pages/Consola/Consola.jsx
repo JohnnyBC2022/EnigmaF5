@@ -1,10 +1,11 @@
+import { useState } from "react";
 import "./Consola.css";
 import { ModalFile1 } from "../ModalFile1/ModalFile1";
-import { useState } from "react";
-
 
 export const Consola = () => {
   const [showModalFile1, setShowModalFile1] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const [isInputFocused, setIsInputFocused] = useState(false);
 
   const handleModalFile1Click = () => {
     setShowModalFile1(true);
@@ -12,6 +13,19 @@ export const Consola = () => {
 
   const closeModalFile1 = () => {
     setShowModalFile1(false);
+  };
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleInputFocus = () => {
+    setIsInputFocused(true);
+    setInputValue("");
+  };
+
+  const handleInputBlur = () => {
+    setIsInputFocused(false);
   };
 
   return (
@@ -39,12 +53,19 @@ export const Consola = () => {
           <p className="flicker1">Select a file to continue...</p>
         </div>
       </div>
-      <p className="consoleC">
-        c:\&gt;...<span className="flicker2">|</span>
-      </p>
-      {showModalFile1 && (
-        <ModalFile1 closeModal={closeModalFile1}/>
-      )}
+      <div className="consoleInputContainer">
+        <label className="consoleLabel">c:\&gt;</label>
+        <input
+          className={`consoleInput ${isInputFocused ? "" : "flicker2"}`}
+          placeholder="Type the command here..."
+          type="text"
+          value={inputValue}
+          onChange={handleInputChange}
+          onFocus={handleInputFocus}
+          onBlur={handleInputBlur}
+        />
+      </div>
+      {showModalFile1 && <ModalFile1 closeModal={closeModalFile1} />}
     </div>
   );
 };
