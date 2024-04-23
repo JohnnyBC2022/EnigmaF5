@@ -11,18 +11,17 @@ import java.util.stream.Collectors;
 
 @Service
 public class QuestionService {
-    
+
     private final QuestionRepository questionRepository;
 
-    public QuestionService (@Autowired QuestionRepository questionRepository){
+    public QuestionService(@Autowired QuestionRepository questionRepository) {
         this.questionRepository = questionRepository;
     }
 
-    public List<QuestionResponse> getAllQuestions(){
+    public List<QuestionResponse> getAllQuestions() {
 
         return questionRepository.findAll().stream()
                 .map(QuestionResponse::from)
                 .collect(Collectors.toList());
     }
-
 }

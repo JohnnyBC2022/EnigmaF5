@@ -1,0 +1,1 @@
+INSERT INTO questions (id, question) VALUES (1, 'Dudas' );
