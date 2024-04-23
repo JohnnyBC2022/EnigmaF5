@@ -10,6 +10,7 @@ import { Consola } from "./pages/Consola/Consola";
 import Prueba02 from "./pages/Prueba02/Prueba02";
 import { HumanityWins } from "./pages/HumanityWins/HumanityWins";
 import { FatalError } from "./pages/FatalError/FatalError";
+import { FinalQuestions } from "./pages/FinalQuestions/FinalQuestions";
 
 
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/prueba02" element={ <Prueba02 />} />
           <Route path="/humanityWins" element={<HumanityWins/>} />
           <Route path="/fatalError" element={<FatalError/>} />
+          <Route path="/finalquestions" element={<FinalQuestions/>} />
 
 
         </Routes>

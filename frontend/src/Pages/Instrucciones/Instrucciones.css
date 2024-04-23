@@ -100,6 +100,11 @@ li {
   margin-top: 7rem;
 }
 
+.paper ol{
+  margin-top: 1.5rem;
+  list-style-type: decimal;
+}
+
 @media screen and (min-width: 1600px) {
   .paper h1 {
     margin-bottom: 5rem;
