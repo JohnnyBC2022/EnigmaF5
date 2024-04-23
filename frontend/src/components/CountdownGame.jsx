@@ -4,13 +4,13 @@ import "./CountdownGame.css";
 export const CountdownGame = () => {
   // Random component
   const Completionist = () => (
-    <div className="countdown_complete">
+    <div className="countdownComplete">
       <h1>¡Vuestro tiempo se ha terminado!</h1>
       <p>
-        No importa hasta donde hayáis llegado. Es el momento de preparar la
+        No pasa nada si no habéis terminado el juego. Es el momento de preparar la
         presentación con vuestros logros.
       </p>
-      <a href="/faltaError">VER GUÍA</a>
+      <a href="/finalQuestion">VER GUÍA</a>
     </div>
   );
 
@@ -27,10 +27,8 @@ export const CountdownGame = () => {
   };
 
   return (
-    <>
-      <div className="countdown">
-        <Countdown date={Date.now() + 3600000} renderer={renderer} />
-      </div>
-    </>
+    <div className="countdownContainer">        
+        <Countdown date={Date.now() +360000} renderer={renderer} />
+    </div>
   );
 };
