@@ -14,9 +14,7 @@
   .modalFile2__container {
     background-color: blue;
     width: 70rem;
-    height: 35rem;
-    padding: 20px;
-    
+    height: 35rem;    
     position: relative;
     background-color: blue;
     width: 70rem;
@@ -32,15 +30,27 @@
   
   .modalFile2__container--buttonClose {
     position: absolute;
-    top: 10px;
-    right: 0;
-    font-size: 20px;
-    background: black;
-    border: 1px solid black;
+    width: 5rem;
+    
+    top:0;
+    right:0;
+    background-color: var(--black-console) !important;
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: .5rem;
+    border: none;
     cursor: pointer;
-    color: black;
-    margin-right: 1rem;
+    transition: 0.3s ease-in-out;
+   
+    
   }
+  .modalFile2__container--buttonClose p{
+    border: solid 0.1rem var(--white);
+    padding: 0.3rem;
+
+
+  }
+  
   .modalFile2__container--form{
 background: #A8A8A8;
 width: 50rem;
@@ -74,7 +84,8 @@ margin-top: 2rem;
   }
   .modalFile2__container--buttonInput{
 font-size: 2rem;
-color: black;
+color: black !important;
+font-size: 2rem !important;
 
   }
   .modalFile2__binary{
