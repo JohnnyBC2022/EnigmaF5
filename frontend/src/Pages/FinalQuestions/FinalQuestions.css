@@ -4,14 +4,11 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: var(--black);
   font-family: var(--ThroughTheNight);
   font-size: 2rem;
-  padding: 20rem;
+  padding: 10rem 20rem;
+  margin: 0 auto;
 }
 
 .mainFinalQuestions h1 {
@@ -22,6 +19,11 @@
   text-transform: uppercase;
 }
 
+.mainFinalQuestions section{
+  margin: 0 auto;
+  width: 70%;
+}
+
 .mainFinalQuestions span{
   padding-right: 1.5rem;
 }
@@ -29,4 +31,4 @@
 .mainFinalQuestions li {
   display: flex;
   margin-top: 2rem;
-}
+} 

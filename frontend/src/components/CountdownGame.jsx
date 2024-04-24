@@ -7,8 +7,8 @@ export const CountdownGame = () => {
     <div className="countdownComplete">
       <h1>¡Vuestro tiempo se ha terminado!</h1>
       <p>
-        No pasa nada si no habéis terminado el juego. Es el momento de preparar la
-        presentación con vuestros logros.
+        No pasa nada si no habéis terminado el juego. Es el momento de preparar
+        la presentación con vuestros logros.
       </p>
       <a href="/finalQuestion">VER GUÍA</a>
     </div>
@@ -27,8 +27,8 @@ export const CountdownGame = () => {
   };
 
   return (
-    <div className="countdownContainer">        
-        <Countdown date={Date.now() +3600000} renderer={renderer} />
+    <div className="countdownContainer">
+      <Countdown date={Date.now() + 3600000} renderer={renderer} />
     </div>
   );
 };
