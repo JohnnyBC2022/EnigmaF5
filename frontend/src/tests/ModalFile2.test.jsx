@@ -13,7 +13,7 @@ test("If password is not correct you recieve an error message ", () => {
   expect(getByText("* Contraseña incorrecta")).toBeInTheDocument();
 });
 
-test("If password is correct you get send to next page ", () => {
+test("If password is correct you see binary message ", () => {
   const { getByLabelText, getByText } = render(<ModalFile2 />);
 
   const input = getByLabelText("Password:");
