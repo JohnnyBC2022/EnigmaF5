@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export const CountdownGame = () => {
-  const [remainingTime, setRemainingTime] = useState(5000);
+  const [remainingTime, setRemainingTime] = useState(3600000);
   useEffect(() => {
     const intervalId = setInterval(() => {
       setRemainingTime((prevRemainingTime) =>
@@ -25,7 +25,7 @@ if (location.pathname.toString() === "/finalquestions") return null;
         No pasa nada si no habéis terminado el juego. Es el momento de preparar
         la presentación con vuestros logros.
       </p>
-      <a href="/finalQuestion">VER GUÍA</a>
+      <a href="/finalquestions">VER GUÍA</a>
     </div>
   );
 
@@ -49,7 +49,7 @@ if (location.pathname.toString() === "/finalquestions") return null;
 
   return (
     <div className="countdownContainer">
-      <Countdown date={Date.now() + 5000} renderer={renderer} />
+      <Countdown date={Date.now() + 3600000} renderer={renderer} />
     </div>
   );
 };
