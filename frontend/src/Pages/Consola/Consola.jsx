@@ -18,6 +18,7 @@ export const Consola = () => {
   };
   const handleModalFile2Click = () => {
     setShowModalFile2(true);
+    closeModalFile1();
   };
 
   return (
@@ -50,7 +51,7 @@ export const Consola = () => {
         c:\&gt;...<span className="flicker2">|</span>
       </p>
       {showModalFile1 && (
-        <ModalFile1 closeModal={closeModalFile1}/>
+        <ModalFile1 closeModalFile1={closeModalFile1}/>
       )}
     </div>
   );
