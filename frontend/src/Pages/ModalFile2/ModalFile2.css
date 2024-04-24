@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     color: black;
+    z-index: 99;
   }
   
   .modalFile2__container {
@@ -30,8 +31,7 @@
   
   .modalFile2__container--buttonClose {
     position: absolute;
-    width: 5rem;
-    
+    width: 5rem;    
     top:0;
     right:0;
     background-color: var(--black-console) !important;
