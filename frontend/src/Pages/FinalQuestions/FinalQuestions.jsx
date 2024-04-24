@@ -1,9 +1,8 @@
-import "../Intro/Intro.css";
+import "./FinalQuestions.css";
 
 export const FinalQuestions = () => {
   return (
     <div className="mainFinalQuestions">
-      <div className="paper">
         <h1>Ha llegado el momento de que preparéis vuestra presentación</h1>
         <p>
           Utilizad las siguientes preguntas como guía. Recordad que tenéis 10
@@ -53,6 +52,5 @@ export const FinalQuestions = () => {
           </li>
         </ul>
       </div>
-    </div>
   );
 };

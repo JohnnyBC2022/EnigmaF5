@@ -1,7 +1,6 @@
 .mainIntro,
 .mainInstructions,
-.mainInstrucciones2,
-.mainFinalQuestions {
+.mainInstrucciones2 {
   background: url(../../assets/images/collageWithoutLogo.jpg);
   height: 100vh;
   max-width: 100%;

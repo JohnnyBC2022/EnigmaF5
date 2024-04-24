@@ -1,0 +1,32 @@
+.mainFinalQuestions {
+  background: url(../../assets/images/paperboard.png);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  font-family: var(--ThroughTheNight);
+  font-size: 2rem;
+  padding: 20rem;
+}
+
+.mainFinalQuestions h1 {
+  margin-bottom: 3rem;
+  font-size: 3.6rem;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.mainFinalQuestions span{
+  padding-right: 1.5rem;
+}
+
+.mainFinalQuestions li {
+  display: flex;
+  margin-top: 2rem;
+}
