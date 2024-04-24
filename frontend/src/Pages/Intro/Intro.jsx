@@ -1,6 +1,6 @@
 import "./Intro.css";
 import { useNavigate } from "react-router-dom";
-import {AudioPlayer} from "../../components/AudioPlayer"
+import { AudioPlayer } from "../../components/AudioPlayer";
 import { useState } from "react";
 
 export const Intro = () => {
@@ -13,13 +13,11 @@ export const Intro = () => {
   };
   return (
     <div className="mainIntro">
-      <div className="mainPaper">
-        <div className="paperContain">
-          <img src="./logoEnigma.svg" alt="" />
-          <button onClick={handleStartButtonClick} className="startBtn">
-            empezar
-          </button>
-        </div>
+      <div className="paper">
+        <img src="./logoEnigma.svg" alt="Enigma Logo"  className="logo"/>
+        <button onClick={handleStartButtonClick} className="startBtn">
+          empezar
+        </button>
       </div>
       {soundPlayed && <AudioPlayer />}
     </div>

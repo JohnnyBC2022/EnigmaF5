@@ -1,4 +1,4 @@
-import "./Instrucciones.css";
+import "../Intro/Intro.css";
 import { useNavigate } from "react-router-dom";
 
 export const Instrucciones2 = () => {
@@ -10,7 +10,7 @@ export const Instrucciones2 = () => {
 
   return (
     <div className="mainInstrucciones2">
-      <div className="mainPaper">
+      <div className="paper">
         <div className="paperContain">
           <p>
             Sois un grupo de expertos en computación a los que os han convocado
@@ -25,10 +25,10 @@ export const Instrucciones2 = () => {
           <p>
             Una vez hechas las presentaciones estaréis preparados para empezar.
           </p>
-          <button onClick={handleStartButtonClick} className="startBtn">
-            ¿Preparados?
-          </button>
         </div>
+        <button onClick={handleStartButtonClick} className="startBtn">
+          ¿Preparados?
+        </button>
       </div>
     </div>
   );
