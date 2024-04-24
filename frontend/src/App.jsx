@@ -1,6 +1,7 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Intro } from "./pages/Intro/Intro";
 import { AudioPlayer } from "./components/AudioPlayer";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { CountdownGame } from "./components/CountdownGame";
 import { Instrucciones } from "./pages/Instrucciones/Instrucciones";
 import { Instrucciones2 } from "./pages/Instrucciones/Instrucciones2";
 import Prueba01 from "./pages/Prueba01/Prueba01";
@@ -12,13 +13,12 @@ import { HumanityWins } from "./pages/HumanityWins/HumanityWins";
 import { FatalError } from "./pages/FatalError/FatalError";
 import { FinalQuestions } from "./pages/FinalQuestions/FinalQuestions";
 
-
-
 function App() {
   return (
     <Router>
       <div>
         <AudioPlayer />
+        <CountdownGame />
         <Routes>
           <Route path="/" element={<Intro />} />
           <Route path="/instrucciones" element={<Instrucciones />} />
@@ -30,8 +30,6 @@ function App() {
           <Route path="/humanityWins" element={<HumanityWins/>} />
           <Route path="/fatalError" element={<FatalError/>} />
           <Route path="/finalquestions" element={<FinalQuestions/>} />
-
-
         </Routes>
       </div>
     </Router>
