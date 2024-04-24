@@ -17,9 +17,11 @@ export default function Prueba02() {
     const handleKeyDown = (event) => {
       if (event.key === "Control") {
         setControlPressed(true);
+        event.preventDefault();
       }
       if (event.key === "5") {
         setFivePressed(true);
+        event.preventDefault();
       }
     };
 
