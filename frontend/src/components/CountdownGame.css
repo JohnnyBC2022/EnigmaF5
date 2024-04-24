@@ -10,6 +10,7 @@
     color: var(--grey);
     width: fit-content;
     margin:auto;
+    z-index: 100;
 }
 
 .countdownComplete{

@@ -28,7 +28,7 @@ export const CountdownGame = () => {
 
   return (
     <div className="countdownContainer">        
-        <Countdown date={Date.now() +360000} renderer={renderer} />
+        <Countdown date={Date.now() +3600000} renderer={renderer} />
     </div>
   );
 };
