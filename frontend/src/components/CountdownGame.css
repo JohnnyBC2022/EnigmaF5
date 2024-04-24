@@ -1,0 +1,53 @@
+.countdownContainer {
+    position: absolute;
+    font-family: var(--Oswald);
+    font-size: 2.8rem;
+    text-align: center;
+    padding: 0 1rem;
+    background-color: var(--black);
+    right: 0;
+    left: 0;
+    color: var(--grey);
+    width: fit-content;
+    margin:auto;
+    z-index: 100;
+}
+
+.countdownComplete{
+    text-align: center;
+    width: 90vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    background-color: var(--black);
+    background-image: url("../assets/images/collageWithoutLogo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:multiply;
+}
+
+.countdownComplete h1, .countdownComplete p{
+    color:var(--grey);
+    margin-bottom: 2.6rem;
+}
+
+.countdownComplete h1 {
+    line-height: 6rem;
+}
+
+.countdownComplete p {
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.countdownComplete a{
+    color: var(--grey);
+    text-decoration: underline;
+}
+
+.countdownComplete a:hover{
+    color: var(--dark-red);
+}
