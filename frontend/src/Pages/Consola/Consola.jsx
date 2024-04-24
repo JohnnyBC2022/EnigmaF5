@@ -1,18 +1,25 @@
 import { useState } from "react";
 import "./Consola.css";
 import { ModalFile1 } from "../ModalFile1/ModalFile1";
+import  ModalFile2  from "../ModalFile2/ModalFile2";
 
 export const Consola = () => {
   const [showModalFile1, setShowModalFile1] = useState(false);
+  const [showModalFile2, setShowModalFile2] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [isInputFocused, setIsInputFocused] = useState(false);
 
   const handleModalFile1Click = () => {
     setShowModalFile1(true);
   };
+  
 
   const closeModalFile1 = () => {
     setShowModalFile1(false);
+  };
+  const handleModalFile2Click = () => {
+    setShowModalFile2(true);
+    closeModalFile1();
   };
 
   const handleInputChange = (event) => {
@@ -41,7 +48,8 @@ export const Consola = () => {
             </div>
             <div className="filesRight">
               <button onClick={handleModalFile1Click}>File 1</button>
-              <button>File 2</button>
+              <button onClick={handleModalFile2Click}>File 2</button>
+              {showModalFile2 && <ModalFile2 onClose={() => setShowModalFile2(false)} />}
             </div>
           </div>
         </div>
