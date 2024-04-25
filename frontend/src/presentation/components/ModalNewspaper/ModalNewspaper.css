@@ -1,0 +1,9 @@
+.newspaper-image-container {
+  height: 80vh;
+  width: 40rem;
+  overflow-y: auto;
+}
+
+.newspaper-image-container img {
+  width: 100%;
+}
