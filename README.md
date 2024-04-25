@@ -1,6 +1,5 @@
-¿Añadimos enlaces al FIGMA y al MURAL? ---> Organizar información en el Mural
+CONFIGURAR CORREO!!!
 
-Añadimos tabla de MÉTODOS y ENDPOINTS  DE LA API?? (Para facilitar la escabilidad)
 
 ![EnigmaF5](/frontend/public/logoEnigma-small.png)
 
@@ -12,6 +11,15 @@ El objetivo del juego, elaborado a modo de escape room, es servir de apoyo duran
 *Enigma F5 is an adventure full of intrigues and conspiracies that explores the history of cryptography and computer science from its beginnings in the 1930s.*
 
 *The objective of the game, designed as an escape room, is to support the selection processes of Factoría F5. Halfway between reality and fiction, players will explore history as a group, testing their teamwork skills and basic digital competencies.*
+
+---
+
+1. [Technologies](#Technologiess)
+2. [Installation](#Installation)
+3. [API: Methods & Endpoints](#Api)
+4. [Screenshots](#Screenshots)
+5. [Documentation & Resources](#Resources)
+6. [Credits](#Credits)
 
 ---
 
@@ -62,6 +70,16 @@ To run the application inside the bakcend folder run:
 cd backend 
 mvn spring-boot:run
 ```
+
+---
+
+# API: Methods & Endpoints
+
+| Method | Path                    | Comments |
+|--------|-----------------|----------|
+|   GET  | /api/questions      | Show all final questions   |
+
+
 ---
 
 # Screenshots
@@ -72,6 +90,30 @@ mvn spring-boot:run
 ![04](/frontend/public/05-PRUEBA-2.png)
 ![05](/frontend/public/04-PANTALLA-ERROR.png)
 ![06](/frontend/public/07-CONSOLA.png)
+
+---
+
+# Documentation & Resources
+
+### Docs
+ <p>
+    <a href ="https://app.mural.co/t/appio3426/m/appio3426/1712045939982/d6a1cbf763eda76e389d3465f12d598977a68c87?sender=u4d17ff63ec1d3f769d9d4687" style="color: lightgrey; display:flex; align-items:center; gap:7px;">
+        <img src="frontend/public/mural.png" alt="Mural Link" style="max-width: 86px;">
+        Link to breafing, feature analysis, MVP, references and other docs.
+    </a>
+</p>
+
+
+### UX / UI Prototype
+
+ <p>
+    <a href ="https://www.figma.com/file/NNDzqK9jusTwBjCZXvEGvx/EnigmaF5?type=design&node-id=74%3A2&mode=design&t=Qy5pju8DfhOX7aqY-1" style="color: lightgrey; display:flex; align-items:center; gap:7px;">
+        <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma Link" style="max-width: 100%;">
+Link to the User Journey and UI prototype.
+    </a>
+</p>
+
+
 
 ---
 # Credits
