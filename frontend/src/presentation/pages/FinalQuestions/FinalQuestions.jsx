@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./FinalQuestions.css";
-import { getQuestions } from "../../services/questionsService";
+import { getQuestions } from "../../../services/questionsService";
 
 export const FinalQuestions = () => {
   const [questions, setQuestions] = useState([]);

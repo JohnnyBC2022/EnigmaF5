@@ -1,6 +1,6 @@
 import "./Intro.css";
 import { useNavigate } from "react-router-dom";
-import { AudioPlayer } from "../../components/AudioPlayer";
+import { AudioPlayer } from "../../components/AudioPlayer/AudioPlayer";
 import { useState } from "react";
 
 export const Intro = () => {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Consola.css";
-import { ModalFile1 } from "../ModalFile1/ModalFile1";
-import  ModalFile2  from "../ModalFile2/ModalFile2";
+import { ModalFile1 } from "../../components/ModalFile1/ModalFile1";
+import  ModalFile2  from "../../components/ModalFile2/ModalFile2";
 
 export const Consola = () => {
   const [showModalFile1, setShowModalFile1] = useState(false);

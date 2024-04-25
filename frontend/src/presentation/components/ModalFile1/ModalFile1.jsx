@@ -1,6 +1,6 @@
 import "./ModalFile1.css";
 import file1Img from "../../assets/images/file1Img.jpg";
-import { ImageMagnifier } from "../../components/ImageMagnifier";
+import { ImageMagnifier } from "../ImageMagnifier/ImageMagnifier";
 
 export const ModalFile1 = ({ closeModal }) => {
   return (

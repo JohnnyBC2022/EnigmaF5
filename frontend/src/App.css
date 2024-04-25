@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Oswald";
-  src: url("./assets/fonts/Oswald.ttf") format("truetype");
+  src: url("../src/presentation/assets/fonts/Oswald.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "ThroughTheNight";
-  src: url("./assets/fonts/ThroughTheNight.regular.ttf") format("truetype");
+  src: url("../src/presentation/assets/fonts/ThroughTheNight.regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "DotGothic";
-  src: url("./assets/fonts/DotGothic16-Regular.ttf") format("truetype");
+  src: url("../src/presentation/assets/fonts/DotGothic16-Regular.ttf") format("truetype");
 }
 
 * {
