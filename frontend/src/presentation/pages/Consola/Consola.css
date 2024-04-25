@@ -42,6 +42,7 @@
 
 .fileInfoRight p:first-child {
   margin-bottom: 1.5rem;
+  z-index: -100;
 }
 
 .files {

@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 .modalContent1 {
@@ -15,7 +16,7 @@
   height: 100%;
 }
 
-.closeModalButton1 {
+.modalContent1 .closeModalButton1 {
   position: absolute;
   width: 5rem;
   top: 0;
@@ -27,7 +28,7 @@
   border: none;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .closeModalButton1 p {
