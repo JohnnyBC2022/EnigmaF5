@@ -1,6 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-
 import { Intro } from "../../presentation/pages/Intro/Intro";
 import { AudioPlayer } from "../../presentation/components/AudioPlayer/AudioPlayer";
 import { CountdownGame } from "../../presentation/components/CountdownGame/CountdownGame";
@@ -14,11 +12,11 @@ import Prueba02 from "../../presentation/pages/Prueba02/Prueba02";
 import { HumanityWins } from "../../presentation/pages/HumanityWins/HumanityWins";
 import { FatalError } from "../../presentation/pages/FatalError/FatalError";
 import { FinalQuestions } from "../../presentation/pages/FinalQuestions/FinalQuestions";
+import ModalBeforeAfter from "../../presentation/components/ModalBeforeAfter/ModalBeforeAfter";
 
 export const AppRouter = () => {
-    return (
-      <BrowserRouter>
-       
+  return (
+    <BrowserRouter>
       <div>
         <AudioPlayer />
         <CountdownGame />
@@ -29,11 +27,13 @@ export const AppRouter = () => {
           <Route path="/prueba01" element={<Prueba01 />} />
           <Route path="/eliza-error" element={<ElizaError />} />
           <Route path="/consola" element={<Consola />} />
-          <Route path="/prueba02" element={ <Prueba02 />} />
-          <Route path="/humanityWins" element={<HumanityWins/>} />
-          <Route path="/fatalError" element={<FatalError/>} />
-          <Route path="/finalquestions" element={<FinalQuestions/>} />
+          <Route path="/prueba02" element={<Prueba02 />} />
+          <Route path="/humanityWins" element={<HumanityWins />} />
+          <Route path="/fatalError" element={<FatalError />} />
+          <Route path="/finalquestions" element={<FinalQuestions />} />
+          <Route path="/modal-before-after" element={<ModalBeforeAfter/>} />
         </Routes>
-      </div>  
-        </BrowserRouter>
-        )};
+      </div>
+    </BrowserRouter>
+  );
+};
