@@ -106,6 +106,10 @@
   color: var(--green-console);
 }
 
+.parryText{
+  color: var(--red-console);
+}
+
 .flicker1 {
   animation-duration: 2s;
   animation-name: flicker1;

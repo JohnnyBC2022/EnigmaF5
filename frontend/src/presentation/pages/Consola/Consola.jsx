@@ -9,6 +9,7 @@ export const Consola = () => {
   const [showModalFile1, setShowModalFile1] = useState(false);
   const [showModalFile2, setShowModalFile2] = useState(false);
   const [isInputFocused, setIsInputFocused] = useState(false);
+  const [conversationStarted, setConversationStarted] = useState(false);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -24,7 +25,11 @@ export const Consola = () => {
     ]);
 
     // Lógica para manejar el comando ingresado
-    handleCommand(inputValue);
+    if (conversationStarted) {
+      handleConversation(inputValue);
+    } else {
+      handleCommand(inputValue);
+    }
 
     // Limpiar el valor del input
     setInputValue("");
@@ -77,6 +82,7 @@ export const Consola = () => {
         ...prevHistory,
         { type: "eliza", message: elizaMessage },
       ]);
+      setConversationStarted(true);
     } else {
       // Simulación de mensaje de error para comando incorrecto
       const errorMessage =
@@ -87,6 +93,29 @@ export const Consola = () => {
         { type: "parry", message: errorMessage },
       ]);
     }
+  };
+
+  const handleConversation = (input) => {
+    // Lógica para manejar la conversación con Eliza y Parry
+    
+    const conversation = [
+      "Eliza: Gracias a mi alta capacidad de procesamiento lógico le puedo ayudar en la toma de decisiones.",
+      "Parry: Demasiado lógico para mi gusto.",
+      "Eliza: Mi software ha sido desarrollado por Joseph Weizenbaum para el MIT.",
+      "Parry: Hasta Frank tenía conversaciones más interesantes que las tuyas.",
+      "Eliza: Disculpe las interrupciones de Parry, es un bug de mi código fuente que aún queda por arreglar. ¿De qué quiere hablar hoy?",
+    ];
+
+    // Almacenar cada mensaje de la conversación en el historial
+    conversation.forEach((message, index) => {
+      setMessageHistory((prevHistory) => [
+        ...prevHistory,
+        { type: index % 2 === 0 ? "eliza" : "parry", message: message },
+      ]);
+    });
+
+    // Resetear el estado de la conversación
+    setConversationStarted(false);
   };
 
   return (
@@ -129,9 +158,9 @@ export const Consola = () => {
       <div className="consoleHistory">
         {/* Historial de mensajes */}
         {messageHistory.map((message, index) => (
-          <p key={index} className={message.type}>
-            {message.message}
-          </p>
+          <p key={index} className={`message ${message.type === "eliza" ? "elizaText" : message.type === "parry" ? "parryText" : "userMessage"}`}>
+          {message.message}
+        </p>
         ))}
       </div>
       <form onSubmit={handleInputSubmit} className="consoleInputContainer">
