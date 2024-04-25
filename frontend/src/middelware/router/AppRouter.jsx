@@ -12,7 +12,6 @@ import Prueba02 from "../../presentation/pages/Prueba02/Prueba02";
 import { HumanityWins } from "../../presentation/pages/HumanityWins/HumanityWins";
 import { FatalError } from "../../presentation/pages/FatalError/FatalError";
 import { FinalQuestions } from "../../presentation/pages/FinalQuestions/FinalQuestions";
-import ModalBeforeAfter from "../../presentation/components/ModalBeforeAfter/ModalBeforeAfter";
 
 export const AppRouter = () => {
   return (
@@ -31,7 +30,6 @@ export const AppRouter = () => {
           <Route path="/humanityWins" element={<HumanityWins />} />
           <Route path="/fatalError" element={<FatalError />} />
           <Route path="/finalquestions" element={<FinalQuestions />} />
-          <Route path="/modal-before-after" element={<ModalBeforeAfter/>} />
         </Routes>
       </div>
     </BrowserRouter>
