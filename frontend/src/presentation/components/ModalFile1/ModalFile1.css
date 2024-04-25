@@ -4,8 +4,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
- /*  width: 90rem;
-  height: 60rem; */
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
