@@ -1,0 +1,59 @@
+.progressBar1 {
+    width: 120px;
+    height: 20px;
+    -webkit-mask: linear-gradient(90deg, #42ae44 70%, #0000 0) 0/10%;
+    mask: linear-gradient(90deg, #42ae44 70%, #0000 0) 0/10%;
+    background:
+        linear-gradient(#42ae44 0 0) 0/0% no-repeat #ddd;
+    animation: pb1 3s infinite steps(3);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes pb1 {
+    100% {
+        background-size: 30%
+    }
+}
+
+.progressBar2 {
+    width: 120px;
+    height: 20px;
+    -webkit-mask: linear-gradient(90deg, #42ae44 70%, #0000 0) 0/10%;
+    mask: linear-gradient(90deg, #42ae44 70%, #0000 0) 0/10%;
+    background:
+        linear-gradient(#42ae44 0 0) 0/0% no-repeat #ddd;
+    animation: pb2 3s infinite steps(4);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes pb2 {
+    0% {
+        background-size: 30%
+    }
+    100% {
+        background-size: 70%
+    }
+}
+
+.progressBar3 {
+    width: 120px;
+    height: 20px;
+    -webkit-mask: linear-gradient(90deg, #42ae44 70%, #0000 0) 0/10%;
+    mask: linear-gradient(90deg, #42ae44 70%, #0000 0) 0/10%;
+    background:
+        linear-gradient(#42ae44 0 0) 0/0% no-repeat #ddd;
+    animation: pb3 3s infinite steps(3);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes pb3 {
+    0% {
+        background-size: 70%
+    }
+    100% {
+        background-size: 100%
+    }
+}
