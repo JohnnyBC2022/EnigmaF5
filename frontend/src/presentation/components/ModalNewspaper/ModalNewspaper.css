@@ -1,5 +1,7 @@
 .newspaper-image-container {
-  width: 17.5rem;
+  height: 80vh;
+  width: 40rem;
+  overflow-y: auto;
 }
 
 .newspaper-image-container img {
