@@ -11,6 +11,8 @@
   justify-content: center;
   background-image: url("../../assets/images/paperboard.png");
   width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .text-container {
