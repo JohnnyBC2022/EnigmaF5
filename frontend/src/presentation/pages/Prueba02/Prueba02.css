@@ -108,13 +108,13 @@
 }
 
 .hint-text {
-  height: 13rem;
+  height: fit-content;
   font-size: 1.9rem;
   font-family: var(--Oswald);
   text-align: justify;
   color: var(--dark-red);
   border: solid 3px var(--dark-red);
-  padding: 0 3rem;
+  padding: 2rem 3rem;
   display: flex;
   align-items: center;
 }
