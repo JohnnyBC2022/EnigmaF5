@@ -47,52 +47,98 @@ export const Consola = () => {
   const handleCommand = (command) => {
     // Lógica para manejar los comandos ingresados
     if (command === "eliza mad-slip:run") {
-      // Simulación de respuesta de Eliza
-      const elizaMessage = (
-        <span className="elizaText">
-          BIENVENIDO A<br />
-          <br />
-          <div>
-            EEEEEE
-            LL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IIII&nbsp;ZZZZZZZ&nbsp;&nbsp;AAAAA
-            <br />
-            EE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ZZ&nbsp;&nbsp;AA&nbsp;&nbsp;&nbsp;AA
-            <br />
-            EEEEEE&nbsp;LL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II&nbsp;&nbsp;&nbsp;&nbsp;ZZZ&nbsp;&nbsp;&nbsp;AAAAAAA
-            <br />
-            EE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II&nbsp;&nbsp;&nbsp;ZZ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AA&nbsp;&nbsp;&nbsp;AA
-            <br />
-            EEEEEE LLLLLL IIII ZZZZZZZ AA&nbsp;&nbsp;&nbsp;AA
-            <br />
-          </div>
-          <br />
-          Copyright (C) 1964, 1967, MIT.
-          <br />
-          All rights reserved.
-          <br />
-          <br />
-          <span className="elizaText">ELIZA</span>: Hola, mi nombre es Eliza.
-          Soy un novedoso programa de inteligencia artificial. Puedo responder a
-          las entradas del usuario con preguntas y respuestas. ¿Cómo está usted
-          hoy?
-        </span>
-      );
-      // Almacenar el mensaje de Eliza en el historial
-      setMessageHistory((prevHistory) => [
-        ...prevHistory,
-        { type: "eliza", message: elizaMessage },
-      ]);
-      setConversationStarted(true);
+      handleElizaStart();
+    } else if (command.toLowerCase().includes("frank")) {
+      handleFrankMention();
+    } else if (command.toLowerCase().includes("parry")) {
+      handleParryMention();
     } else {
-      // Simulación de mensaje de error para comando incorrecto
-      const errorMessage =
-        "Comando incorrecto. Introduzca el comando correcto para ejecutar Eliza.";
-      // Almacenar el mensaje de Parry en el historial
-      setMessageHistory((prevHistory) => [
-        ...prevHistory,
-        { type: "parry", message: errorMessage },
-      ]);
+      handleUnknownCommand();
     }
+  };
+
+  const handleElizaStart = () => {
+    const elizaMessage = (
+      <span className="elizaText">
+        BIENVENIDO A<br />
+        <br />
+        <div>
+          EEEEEE
+          LL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IIII&nbsp;ZZZZZZZ&nbsp;&nbsp;AAAAA
+          <br />
+          EE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ZZ&nbsp;&nbsp;AA&nbsp;&nbsp;&nbsp;AA
+          <br />
+          EEEEEE&nbsp;LL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II&nbsp;&nbsp;&nbsp;&nbsp;ZZZ&nbsp;&nbsp;&nbsp;AAAAAAA
+          <br />
+          EE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II&nbsp;&nbsp;&nbsp;ZZ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AA&nbsp;&nbsp;&nbsp;AA
+          <br />
+          EEEEEE LLLLLL IIII ZZZZZZZ AA&nbsp;&nbsp;&nbsp;AA
+          <br />
+        </div>
+        <br />
+        Copyright (C) 1964, 1967, MIT.
+        <br />
+        All rights reserved.
+        <br />
+        <br />
+        <span className="elizaText">ELIZA</span>: Hola, mi nombre es Eliza.
+        Soy un novedoso programa de inteligencia artificial. Puedo responder a
+        las entradas del usuario con preguntas y respuestas. ¿Cómo está usted
+        hoy?
+      </span>
+    );
+    setMessageHistory((prevHistory) => [
+      ...prevHistory,
+      { type: "eliza", message: elizaMessage },
+    ]);
+    setConversationStarted(true);
+  };
+
+  const handleFrankMention = () => {
+    const elizaMessage = (
+      <span className="elizaText">
+        No tengo autorización para hablar de eso. ¿De qué quiere hablar hoy?
+      </span>
+    );
+    const parryMessage = (
+      <span className="parryText">
+        Me pones de los nervios, a mí me gusta este tema.
+        <a href="#" onClick={handleNewsClick}>
+          “Noticia-Olson.jpg”
+        </a>
+      </span>
+    );
+    setMessageHistory((prevHistory) => [
+      ...prevHistory,
+      { type: "eliza", message: elizaMessage },
+      { type: "parry", message: parryMessage },
+    ]);
+  };
+
+  const handleParryMention = () => {
+    const elizaMessage = (
+      <span className="elizaText">
+        Disculpe las interrupciones de Parry, es un bug de mi código fuente que aún queda por arreglar. ¿De qué quiere hablar hoy?
+      </span>
+    );
+    setMessageHistory((prevHistory) => [
+      ...prevHistory,
+      { type: "eliza", message: elizaMessage },
+    ]);
+  };
+
+  const handleUnknownCommand = () => {
+    const errorMessage =
+      "Comando incorrecto. Introduzca el comando correcto para ejecutar Eliza.";
+    setMessageHistory((prevHistory) => [
+      ...prevHistory,
+      { type: "parry", message: errorMessage },
+    ]);
+  };
+
+  const handleNewsClick = () => {
+    // Lógica para mostrar la imagen "Noticia-Olson.jpg"
+    // Puedes usar un estado para controlar la visibilidad de la imagen o abrir un modal
   };
 
   const handleConversation = (input) => {
@@ -158,9 +204,18 @@ export const Consola = () => {
       <div className="consoleHistory">
         {/* Historial de mensajes */}
         {messageHistory.map((message, index) => (
-          <p key={index} className={`message ${message.type === "eliza" ? "elizaText" : message.type === "parry" ? "parryText" : "userMessage"}`}>
-          {message.message}
-        </p>
+          <p
+            key={index}
+            className={`message ${
+              message.type === "eliza"
+                ? "elizaText"
+                : message.type === "parry"
+                ? "parryText"
+                : "userMessage"
+            }`}
+          >
+            {message.message}
+          </p>
         ))}
       </div>
       <form onSubmit={handleInputSubmit} className="consoleInputContainer">
