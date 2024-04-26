@@ -12,6 +12,7 @@ import Prueba02 from "../../presentation/pages/Prueba02/Prueba02";
 import { HumanityWins } from "../../presentation/pages/HumanityWins/HumanityWins";
 import { FatalError } from "../../presentation/pages/FatalError/FatalError";
 import { FinalQuestions } from "../../presentation/pages/FinalQuestions/FinalQuestions";
+import ModalLastPage from "../../presentation/components/ModalLastPage/ModalLastPage";
 
 export const AppRouter = () => {
   return (
@@ -30,6 +31,7 @@ export const AppRouter = () => {
           <Route path="/humanityWins" element={<HumanityWins />} />
           <Route path="/fatalError" element={<FatalError />} />
           <Route path="/finalquestions" element={<FinalQuestions />} />
+          <Route path="/modal" element={<ModalLastPage />} />
         </Routes>
       </div>
     </BrowserRouter>
