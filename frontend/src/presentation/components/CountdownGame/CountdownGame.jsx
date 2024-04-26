@@ -4,7 +4,11 @@ import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export const CountdownGame = () => {
-  const [remainingTime, setRemainingTime] = useState(3600000);
+  const [remainingTime, setRemainingTime] = useState(() => {
+    const savedTime = localStorage.getItem("remainingTime");
+    return savedTime ? parseInt(savedTime, 10) : 3600000;
+  });
+  
   useEffect(() => {
     const intervalId = setInterval(() => {
       setRemainingTime((prevRemainingTime) =>
@@ -14,6 +18,10 @@ export const CountdownGame = () => {
 
     return () => clearInterval(intervalId);
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("remainingTime", remainingTime.toString());
+  }, [remainingTime]);
 
   const location = useLocation();
 if (location.pathname.toString() === "/finalquestions") return null;
@@ -49,7 +57,7 @@ if (location.pathname.toString() === "/finalquestions") return null;
 
   return (
     <div className="countdownContainer">
-      <Countdown date={Date.now() + 3600000} renderer={renderer} />
+      <Countdown date={Date.now() + remainingTime} renderer={renderer} />
     </div>
   );
 };
