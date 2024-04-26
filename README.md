@@ -28,8 +28,10 @@ El objetivo del juego, elaborado a modo de escape room, es servir de apoyo duran
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
-![JEST](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)
 ![Vite ](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![Vitest](https://img.shields.io/badge/VITEST%20-%20%2394bb4e?style=for-the-badge&logo=VITEST&logoColor=%23fff2a9)
+
+
 
 ## Backend:
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -55,11 +57,6 @@ cd frontend
 npm install 
 ```
 
-To install different libraries needed for the project inside the frontend folder run:
-```
-npm install react-router-dom
-npm install axios
-```
 To run the application inside of the fronted folder run:
 ```
 npm run dev
@@ -119,27 +116,27 @@ Link to the User Journey and UI prototype.
 # Credits
 <p>
     <a href ="https://github.com/JohnnyBC2022" style="color: white; display:flex; align-items:center; gap:7px;">
-        <img src="image.png" width="21" height="21" alt="Github" style="max-width: 100%;"> Jonhatan Baragaño
+        <img src="frontend/public/github.png" width="21" height="21" alt="Github" style="max-width: 100%;"> Jonhatan Baragaño
     </a>
 </p>
 <p>
     <a href ="https://github.com/David-MarCle"  style="color: white; display:flex; align-items:center; gap:7px;">
-        <img src="image.png" width="21" height="21" alt="Github" style="max-width: 100%;"> David Martínez
+        <img src="frontend/public/github.png" width="21" height="21" alt="Github" style="max-width: 100%;"> David Martínez
     </a>
 </p>
 <p>
     <a href ="https://github.com/San-QP"  style="color: white; display:flex; align-items:center; gap:7px;">
-        <img src="image.png" width="21" height="21" alt="Github" style="max-width: 100%;"> Sandra Rebollar
+        <img src="frontend/public/github.png" width="21" height="21" alt="Github" style="max-width: 100%;"> Sandra Rebollar
     </a>
 </p>
 <p>
     <a href ="https://github.com/osaga-fu"  style="color: white; display:flex; align-items:center; gap:7px;">
-        <img src="image.png" width="21" height="21" alt="Github" style="max-width: 100%;"> Olaya Sánchez
+        <img src="frontend/public/github.png" width="21" height="21" alt="Github" style="max-width: 100%;"> Olaya Sánchez
     </a>
 </p>
 <p>
     <a href ="https://github.com/Emilly3008"  style="color: white; display:flex; align-items:center; gap:7px;">
-        <img src="image.png" width="21" height="21" alt="Github" style="max-width: 100%;"> Emily Sena
+        <img src="frontend/public/github.png" width="21" height="21" alt="Github" style="max-width: 100%;"> Emily Sena
     </a>
 </p>
 
