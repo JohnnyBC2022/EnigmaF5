@@ -71,6 +71,12 @@ align-items: center;
 gap: 2rem;
 
   }
+  .modalFile2__container--formPassword{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
   .modalFile2__container--form p{
 text-transform: none;
   }

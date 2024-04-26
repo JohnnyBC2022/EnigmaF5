@@ -35,21 +35,23 @@ const ModalFile2 = ({ onClose }) => {
             <div className="modalFile2__container--formBorder">
               <p>Información clasificada</p>
               <p>Introduzca contraseña para continuar:</p>
-              <label htmlFor="password">
-                Password:
-                <input
-                  type="password"
-                  value={inputValue}
-                  onChange={handlePasswordChange}
-                  id="password"
-                />
-              </label>
-              <button
-                className="modalFile2__container--buttonInput"
-                onClick={handleSubmitPassword}
-              >
-                [Enviar]
-              </button>
+              <form className="modalFile2__container--formPassword" onSubmit={handleSubmitPassword}>
+                <label htmlFor="password">
+                  Password:
+                  <input
+                    type="password"
+                    value={inputValue}
+                    onChange={handlePasswordChange}
+                    id="password"
+                  />
+                </label>
+                <button
+                  type="submit"
+                  className="modalFile2__container--buttonInput"
+                >
+                  [Enviar]
+                </button>
+              </form>
               {passwordError && <h6>* Contraseña incorrecta</h6>}
             </div>
           </div>

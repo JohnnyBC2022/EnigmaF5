@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Consola.css";
-import { ModalFile1 } from "../../components/ModalFile1/ModalFile1";
-import ModalFile2 from "../../components/ModalFile2/ModalFile2";
+import FileModals from "../../components/ConsolaComponentes/FileModals";
+import ButtonsModals from "../../components/ConsolaComponentes/ButtonsModals";
+import WelcomeMessage from "../../components/ConsolaComponentes/WelcomeMessage";
 
 export const Consola = () => {
   const [inputValue, setInputValue] = useState("");
@@ -97,7 +98,7 @@ export const Consola = () => {
 
   const handleConversation = (input) => {
     // Lógica para manejar la conversación con Eliza y Parry
-    
+
     const conversation = [
       "Eliza: Gracias a mi alta capacidad de procesamiento lógico le puedo ayudar en la toma de decisiones.",
       "Parry: Demasiado lógico para mi gusto.",
@@ -129,40 +130,32 @@ export const Consola = () => {
               <p>&nbsp;</p>
               <p>&nbsp;</p>
             </div>
-            <div className="filesRight">
-              <button onClick={() => setShowModalFile1(true)}>File 1</button>
-              {showModalFile1 && (
-                <ModalFile1 onClose={() => setShowModalFile1(false)} />
-              )}
-              <button onClick={() => setShowModalFile2(true)}>File 2</button>
-              {showModalFile2 && (
-                <ModalFile2 onClose={() => setShowModalFile2(false)} />
-              )}
-            </div>
+            <ButtonsModals
+              onFile1Click={() => setShowModalFile1(true)}
+              onFile2Click={() => setShowModalFile2(true)}
+            />
           </div>
         </div>
-        <div className="fileInfoRight">
-          <p>
-            <span>Welcome to QDOS version alpha.</span>
-            <br />
-            <br />
-            Copyright 1968.
-            <br />
-            Malibu Artifactual Intelligence, Inc.
-            <br />
-            <br />
-            <span className="flicker1">Select a file to continue...</span>
-          </p>
-        </div>
+        <WelcomeMessage />
       </div>
+
+      <FileModals
+        showModalFile1={showModalFile1}
+        showModalFile2={showModalFile2}
+        onCloseModalFile1={() => setShowModalFile1(false)}
+        onCloseModalFile2={() => setShowModalFile2(false)}
+      />
+      {/* Historial de mensajes */}
       <div className="consoleHistory">
-        {/* Historial de mensajes */}
         {messageHistory.map((message, index) => (
-          <p key={index} className={`message ${message.type === "eliza" ? "elizaText" : message.type === "parry" ? "parryText" : "userMessage"}`}>
-          {message.message}
-        </p>
+          <p
+            key={index}
+            className={`message ${message.type === "eliza" ? "elizaText" : message.type === "parry" ? "parryText" : "userMessage"}`}>
+            {message.message}
+          </p>
         ))}
       </div>
+      {/* Entrada de usuario */}
       <form onSubmit={handleInputSubmit} className="consoleInputContainer">
         <label className="consoleLabel">c:\&gt;</label>
         <input
