@@ -102,12 +102,28 @@
   caret-shape: block;
 }
 
-.elizaText{
+.elizaText {
   color: var(--green-console);
 }
 
-.parryText{
+.parryText {
   color: var(--red-console);
+}
+
+.elizaText,
+.parryText {
+  white-space: wrap;
+  animation: typing 2s, 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .flicker1 {
