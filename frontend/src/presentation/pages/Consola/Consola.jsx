@@ -48,10 +48,18 @@ export const Consola = () => {
     // Lógica para manejar los comandos ingresados
     if (command === "eliza mad-slip:run") {
       handleElizaStart();
-    } else if (command.toLowerCase().includes("frank")) {
+    } else if (
+      command.toLowerCase().includes("eliza:new-theme") &&
+      command.toLowerCase().includes("frank")
+    ) {
       handleFrankMention();
-    } else if (command.toLowerCase().includes("parry")) {
+    } else if (
+      command.toLowerCase().includes("eliza:new-theme") &&
+      command.toLowerCase().includes("parry")
+    ) {
       handleParryMention();
+    } else if (command.toLowerCase().includes("eliza:new-theme")) {
+      handleNewTheme();
     } else {
       handleUnknownCommand();
     }
@@ -81,10 +89,9 @@ export const Consola = () => {
         All rights reserved.
         <br />
         <br />
-        <span className="elizaText">ELIZA</span>: Hola, mi nombre es Eliza.
-        Soy un novedoso programa de inteligencia artificial. Puedo responder a
-        las entradas del usuario con preguntas y respuestas. ¿Cómo está usted
-        hoy?
+        <span className="elizaText">ELIZA</span>: Hola, mi nombre es Eliza. Soy
+        un novedoso programa de inteligencia artificial. Puedo responder a las
+        entradas del usuario con preguntas y respuestas. ¿Cómo está usted hoy?
       </span>
     );
     setMessageHistory((prevHistory) => [
@@ -118,7 +125,9 @@ export const Consola = () => {
   const handleParryMention = () => {
     const elizaMessage = (
       <span className="elizaText">
-        Disculpe las interrupciones de Parry, es un bug de mi código fuente que aún queda por arreglar. ¿De qué quiere hablar hoy?
+        ELIZA: Disculpe las interrupciones de Parry, es un bug de mi código
+        fuente que aún queda por arreglar. ¿De qué quiere hablar hoy? Introduzca
+        el comando correcto eliza:new-theme(sutema)
       </span>
     );
     setMessageHistory((prevHistory) => [
@@ -127,9 +136,29 @@ export const Consola = () => {
     ]);
   };
 
+  const handleNewTheme = () => {
+    const newThemeMessage = (
+      <span className="elizaText">
+        Eliza: Es un tema interesante, pero no está en mi base de datos. Debe
+        modificar mi configuración para darme acceso a la red.
+        <br />
+        <span className="parryText">PARRY: Me aburro...</span>
+        <br />
+        <span className="elizaText">
+          ELIZA: Le facilito las instrucciones para modificar mi configuración:
+          "ELIZA_config-manual"
+        </span>
+      </span>
+    );
+    setMessageHistory((prevHistory) => [
+      ...prevHistory,
+      { type: "eliza", message: newThemeMessage },
+    ]);
+  };
+
   const handleUnknownCommand = () => {
     const errorMessage =
-      "Comando incorrecto. Introduzca el comando correcto para ejecutar Eliza.";
+      "Error: Comando no reconocido. Introduce una instrucción válida para continuar.";
     setMessageHistory((prevHistory) => [
       ...prevHistory,
       { type: "parry", message: errorMessage },
@@ -143,13 +172,13 @@ export const Consola = () => {
 
   const handleConversation = (input) => {
     // Lógica para manejar la conversación con Eliza y Parry
-    
+
     const conversation = [
       "Eliza: Gracias a mi alta capacidad de procesamiento lógico le puedo ayudar en la toma de decisiones.",
       "Parry: Demasiado lógico para mi gusto.",
       "Eliza: Mi software ha sido desarrollado por Joseph Weizenbaum para el MIT.",
       "Parry: Hasta Frank tenía conversaciones más interesantes que las tuyas.",
-      "Eliza: Disculpe las interrupciones de Parry, es un bug de mi código fuente que aún queda por arreglar. ¿De qué quiere hablar hoy?",
+      "Disculpe las interrupciones de Parry, es un bug de mi código fuente que aún queda por arreglar. ¿De qué quiere hablar hoy? Introduzca el comando correcto eliza:new-theme(sutema)",
     ];
 
     // Almacenar cada mensaje de la conversación en el historial
