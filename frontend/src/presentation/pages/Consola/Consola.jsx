@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Consola.css";
 import { ModalFile1 } from "../../components/ModalFile1/ModalFile1";
 import ModalFile2 from "../../components/ModalFile2/ModalFile2";
+import ModalNewspaper from "../../components/ModalNewspaper/ModalNewspaper"
 import { useNavigate } from "react-router-dom";
 
 export const Consola = () => {
@@ -9,6 +10,7 @@ export const Consola = () => {
   const [messageHistory, setMessageHistory] = useState([]);
   const [showModalFile1, setShowModalFile1] = useState(false);
   const [showModalFile2, setShowModalFile2] = useState(false);
+  const [showModalNewspaper, setShowModalNewspaper] = useState(false);
   const [isInputFocused, setIsInputFocused] = useState(false);
   const [conversationStarted, setConversationStarted] = useState(false);
   const [connectionAttempts, setConnectionAttempts] = useState(0);
@@ -138,7 +140,7 @@ export const Consola = () => {
       <span className="elizaText">
         ELIZA: Disculpe las interrupciones de Parry, es un bug de mi código
         fuente que aún queda por arreglar. ¿De qué quiere hablar hoy? Introduzca
-        el comando correcto eliza:new-theme(sutema)
+        el comando correcto eliza:new-theme(su tema)
       </span>
     );
     setMessageHistory((prevHistory) => [
@@ -254,8 +256,7 @@ export const Consola = () => {
   };
 
   const handleNewsClick = () => {
-    // Lógica para mostrar la imagen "Noticia-Olson.jpg"
-    // Puedes usar un estado para controlar la visibilidad de la imagen o abrir un modal
+    setShowModalNewspaper(true);
   };
 
   const handleConversation = (input) => {
@@ -347,6 +348,9 @@ export const Consola = () => {
           onBlur={handleInputBlur}
         />
       </form>
+      {showModalNewspaper && (
+        <ModalNewspaper onClose={() => setShowModalNewspaper(false)} />
+      )}
     </div>
   );
 };
