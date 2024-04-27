@@ -3,7 +3,8 @@ import "./Consola.css";
 import FileModals from "../../components/ConsolaComponentes/FileModals";
 import ButtonsModals from "../../components/ConsolaComponentes/ButtonsModals";
 import WelcomeMessage from "../../components/ConsolaComponentes/WelcomeMessage";
-import ModalNewspaper from "../../components/ModalNewspaper/ModalNewspaper"
+import ModalNewspaper from "../../components/ModalNewspaper/ModalNewspaper";
+import ModalBeforeAfter from "../../components/ModalBeforeAfter/ModalBeforeAfter";
 import { useNavigate } from "react-router-dom";
 
 export const Consola = () => {
@@ -12,6 +13,7 @@ export const Consola = () => {
   const [showModalFile1, setShowModalFile1] = useState(false);
   const [showModalFile2, setShowModalFile2] = useState(false);
   const [showModalNewspaper, setShowModalNewspaper] = useState(false);
+  const [showModalBeforeAfter, setShowModalBeforeAfter] = useState(false);
   const [isInputFocused, setIsInputFocused] = useState(false);
   const [conversationStarted, setConversationStarted] = useState(false);
   const [connectionAttempts, setConnectionAttempts] = useState(0);
@@ -160,7 +162,9 @@ export const Consola = () => {
         <br />
         <span className="elizaText">
           ELIZA: Le facilito las instrucciones para modificar mi configuración:
+          <a href="#" onClick={handleBeforeAfterClick}>
           "ELIZA_config-manual"
+        </a>
         </span>
       </span>
     );
@@ -168,6 +172,10 @@ export const Consola = () => {
       ...prevHistory,
       { type: "eliza", message: newThemeMessage },
     ]);
+  };
+
+  const handleBeforeAfterClick = () => {
+    setShowModalBeforeAfter(true);
   };
 
   const handleAdminAccess = () => {
@@ -268,7 +276,7 @@ export const Consola = () => {
       "Parry: Demasiado lógico para mi gusto.",
       "Eliza: Mi software ha sido desarrollado por Joseph Weizenbaum para el MIT.",
       "Parry: Hasta Frank tenía conversaciones más interesantes que las tuyas.",
-      "Disculpe las interrupciones de Parry, es un bug de mi código fuente que aún queda por arreglar. ¿De qué quiere hablar hoy? Introduzca el comando correcto eliza:new-theme(sutema)",
+      "Disculpe las interrupciones de Parry, es un bug de mi código fuente que aún queda por arreglar. ¿De qué quiere hablar hoy? Introduzca el comando correcto eliza:new-theme(su tema)",
     ];
 
     // Almacenar cada mensaje de la conversación en el historial
@@ -332,6 +340,9 @@ export const Consola = () => {
       </form>
       {showModalNewspaper && (
         <ModalNewspaper onClose={() => setShowModalNewspaper(false)} />
+      )}
+      {showModalBeforeAfter && (
+        <ModalBeforeAfter onClose={() => setShowModalBBeforeAfter(false)} />
       )}
     </div>
   );
