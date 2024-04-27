@@ -7,6 +7,8 @@ import ModalNewspaper from "../../components/ModalNewspaper/ModalNewspaper";
 import ModalBeforeAfter from "../../components/ModalBeforeAfter/ModalBeforeAfter";
 import ModalReport from "../../components/ModalReport/ModalReport";
 import ModalLastPage from "../../components/ModalLastPage/ModalLastPage";
+import {ProgressBar} from "../../components/ProgressBar/ProgressBar";
+import { ProgressBar2 } from "../../components/ProgressBar/ProgressBar2";
 import { useNavigate } from "react-router-dom";
 
 export const Consola = () => {
@@ -208,7 +210,7 @@ export const Consola = () => {
           <br />
           ------------------------------------------
           <br />
-          Progress:___________50%
+          <ProgressBar />
           <br />
           FATAL ERROR: Update interrupted
           <br />
@@ -229,7 +231,7 @@ export const Consola = () => {
           <br />
           ------------------------------------------
           <br />
-          Progress:_____________________75%
+          <ProgressBar2 />
           <br />
           FATAL ERROR: Update interrupted
           <br />

@@ -18,7 +18,7 @@ export const AppRouter = () => {
     <BrowserRouter>
       <div>
         <AudioPlayer />
-        {<CountdownGame />}
+        {/* {<CountdownGame />} */}
         <Routes>
           <Route path="/" element={<Intro />} />
           <Route path="/instrucciones" element={<Instrucciones />} />
