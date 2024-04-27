@@ -5,7 +5,8 @@ import ButtonsModals from "../../components/ConsolaComponentes/ButtonsModals";
 import WelcomeMessage from "../../components/ConsolaComponentes/WelcomeMessage";
 import ModalNewspaper from "../../components/ModalNewspaper/ModalNewspaper";
 import ModalBeforeAfter from "../../components/ModalBeforeAfter/ModalBeforeAfter";
-import ModalReport from "../../components/ModalReport/ModalReport"
+import ModalReport from "../../components/ModalReport/ModalReport";
+import ModalLastPage from "../../components/ModalLastPage/ModalLastPage";
 import { useNavigate } from "react-router-dom";
 
 export const Consola = () => {
@@ -16,6 +17,7 @@ export const Consola = () => {
   const [showModalNewspaper, setShowModalNewspaper] = useState(false);
   const [showModalBeforeAfter, setShowModalBeforeAfter] = useState(false);
   const [showModalReport, setShowModalReport] = useState(false);
+  const [showModalLastPage, setShowModalLastPage] = useState(false);
   const [isInputFocused, setIsInputFocused] = useState(false);
   const [conversationStarted, setConversationStarted] = useState(false);
   const [connectionAttempts, setConnectionAttempts] = useState(0);
@@ -214,7 +216,7 @@ export const Consola = () => {
           <span className="parryText">
             PARRY: Vaya, eso ha tenido que doler. Esta información es bastante
             interesante ¿No os parece?
-          </span> <a href="#" onClick={handleOpenReportModal}>WeizembaunReport.jpg</a>
+          </span> <a href="#" onClick={handleOpenModalReport}>WeizembaunReport.jpg</a>
           <br />
           ELIZA: La conexión ha fallado. Por favor, vuelva a introducir el
           comando:
@@ -234,7 +236,8 @@ export const Consola = () => {
           <br />
           <span className="parryText">
             PARRY: Eliza, creo que se te ha caído esto:
-            FINAL-ELIZA_config-manual. Curioso que omitieses esa parte del
+            <a href="#" onClick={handleOpenModalLastPage}>FINAL-ELIZA_config-manual.</a>
+             Curioso que omitieses esa parte del
             manual, ¿verdad?
           </span>
           <br />
@@ -257,8 +260,11 @@ export const Consola = () => {
     ]);
   };
 
-  const handleOpenReportModal = () => {
+  const handleOpenModalReport = () => {
     setShowModalReport(true);
+  }
+  const handleOpenModalLastPage = () => {
+    setShowModalLastPage(true);
   }
 
   const handleUnknownCommand = () => {
@@ -352,6 +358,9 @@ export const Consola = () => {
       )}
       {showModalReport && (
         <ModalReport onClose={() => setShowModalReport(false)} />
+      )}
+      {showModalLastPage && (
+        <ModalLastPage onClose={() => setShowModalLastPage(false)} />
       )}
     </div>
   );
