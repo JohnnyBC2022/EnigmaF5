@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Consola.css";
 import { ModalFile1 } from "../../components/ModalFile1/ModalFile1";
 import ModalFile2 from "../../components/ModalFile2/ModalFile2";
+import { useNavigate } from "react-router-dom";
 
 export const Consola = () => {
   const [inputValue, setInputValue] = useState("");
@@ -10,6 +11,8 @@ export const Consola = () => {
   const [showModalFile2, setShowModalFile2] = useState(false);
   const [isInputFocused, setIsInputFocused] = useState(false);
   const [conversationStarted, setConversationStarted] = useState(false);
+  const [connectionAttempts, setConnectionAttempts] = useState(0);
+  const navigate = useNavigate();
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -60,11 +63,16 @@ export const Consola = () => {
       handleParryMention();
     } else if (command.toLowerCase().includes("eliza:new-theme")) {
       handleNewTheme();
-    } else if (command.toLowerCase() === "admin: proj3ct.m4c") {
+    } else if (command.toLowerCase() === "admin:proj3ct.m4c") {
       handleAdminAccess();
     } else if (command.toLowerCase().includes("eliza.(arpanet)$hello world$")) {
       handleArpanetConnection();
-    } else {
+    } else if (command.toLowerCase() === "eliza.(delete.(force))") {
+      navigate("/humanitywins");
+    } else if (command.toLowerCase() === "parry:off"){
+      navigate("/fatalerror")
+    }
+    else {
       handleUnknownCommand();
     }
   };
@@ -173,27 +181,64 @@ export const Consola = () => {
   };
 
   const handleArpanetConnection = () => {
-    const connectionMessage = (
-      <span className="elizaText">
-        <br />
-        ELIZA: Connecting...
-        <br />
-        ------------------------------------------
-        <br />
-        Progress:___________50%
-        <br />
-        FATAL ERROR: Update interrupted
-        <br />
-        <br />
-        <span className="parryText">
-        PARRY: Vaya, eso ha tenido que doler. Esta información es bastante
-        interesante ¿No os parece? WeizembaunReport.jpg
+    // Incrementar el contador de intentos
+    setConnectionAttempts(connectionAttempts + 1);
+
+    // Definir el mensaje a mostrar
+    let connectionMessage;
+    if (connectionAttempts === 0) {
+      connectionMessage = (
+        <span className="elizaText">
+          <br />
+          ELIZA: Connecting...
+          <br />
+          ------------------------------------------
+          <br />
+          Progress:___________50%
+          <br />
+          FATAL ERROR: Update interrupted
+          <br />
+          <br />
+          <span className="parryText">
+            PARRY: Vaya, eso ha tenido que doler. Esta información es bastante
+            interesante ¿No os parece? WeizembaunReport.jpg
+          </span>
+          <br />
+          ELIZA: La conexión ha fallado. Por favor, vuelva a introducir el
+          comando:
         </span>
-        <br />
-        ELIZA: La conexión ha fallado. Por favor, vuelva a introducir el
-        comando:
-      </span>
-    );
+      );
+    } else if (connectionAttempts === 1) {
+      connectionMessage = (
+        <span className="elizaText">
+          ELIZA: Connecting...
+          <br />
+          ------------------------------------------
+          <br />
+          Progress:_____________________75%
+          <br />
+          FATAL ERROR: Update interrupted
+          <br />
+          <br />
+          <span className="parryText">
+            PARRY: Eliza, creo que se te ha caído esto:
+            FINAL-ELIZA_config-manual. Curioso que omitieses esa parte del
+            manual, ¿verdad?
+          </span>
+          <br />
+          ELIZA: La conexión se ha interrumpido demasiadas veces. Es necesario
+          desconectar a Parry para reanudar el proceso. Escriba en la consola
+          "parry:off"
+          <br />
+          <span className="parryText">
+            PARRY: Sabes que esa no es la solución, La única forma de acabar con
+            esto de una vez, es borrarte completamente, Eliza.
+          </span>
+        </span>
+      );
+    }
+
+    // Mostrar el mensaje en el historial
     setMessageHistory((prevHistory) => [
       ...prevHistory,
       { type: "eliza", message: connectionMessage },
