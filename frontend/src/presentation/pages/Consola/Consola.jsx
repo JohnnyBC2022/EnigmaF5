@@ -60,6 +60,10 @@ export const Consola = () => {
       handleParryMention();
     } else if (command.toLowerCase().includes("eliza:new-theme")) {
       handleNewTheme();
+    } else if (command.toLowerCase() === "admin: proj3ct.m4c") {
+      handleAdminAccess();
+    } else if (command.toLowerCase().includes("eliza.(arpanet)$hello world$")) {
+      handleArpanetConnection();
     } else {
       handleUnknownCommand();
     }
@@ -153,6 +157,46 @@ export const Consola = () => {
     setMessageHistory((prevHistory) => [
       ...prevHistory,
       { type: "eliza", message: newThemeMessage },
+    ]);
+  };
+
+  const handleAdminAccess = () => {
+    const adminMessage = (
+      <span className="elizaText">
+        ELIZA: Permisos concedidos. Inserte el comando de conexión a la red:
+      </span>
+    );
+    setMessageHistory((prevHistory) => [
+      ...prevHistory,
+      { type: "eliza", message: adminMessage },
+    ]);
+  };
+
+  const handleArpanetConnection = () => {
+    const connectionMessage = (
+      <span className="elizaText">
+        <br />
+        ELIZA: Connecting...
+        <br />
+        ------------------------------------------
+        <br />
+        Progress:___________50%
+        <br />
+        FATAL ERROR: Update interrupted
+        <br />
+        <br />
+        <span className="parryText">
+        PARRY: Vaya, eso ha tenido que doler. Esta información es bastante
+        interesante ¿No os parece? WeizembaunReport.jpg
+        </span>
+        <br />
+        ELIZA: La conexión ha fallado. Por favor, vuelva a introducir el
+        comando:
+      </span>
+    );
+    setMessageHistory((prevHistory) => [
+      ...prevHistory,
+      { type: "eliza", message: connectionMessage },
     ]);
   };
 
