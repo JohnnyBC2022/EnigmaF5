@@ -5,6 +5,7 @@ import ButtonsModals from "../../components/ConsolaComponentes/ButtonsModals";
 import WelcomeMessage from "../../components/ConsolaComponentes/WelcomeMessage";
 import ModalNewspaper from "../../components/ModalNewspaper/ModalNewspaper";
 import ModalBeforeAfter from "../../components/ModalBeforeAfter/ModalBeforeAfter";
+import ModalReport from "../../components/ModalReport/ModalReport"
 import { useNavigate } from "react-router-dom";
 
 export const Consola = () => {
@@ -14,6 +15,7 @@ export const Consola = () => {
   const [showModalFile2, setShowModalFile2] = useState(false);
   const [showModalNewspaper, setShowModalNewspaper] = useState(false);
   const [showModalBeforeAfter, setShowModalBeforeAfter] = useState(false);
+  const [showModalReport, setShowModalReport] = useState(false);
   const [isInputFocused, setIsInputFocused] = useState(false);
   const [conversationStarted, setConversationStarted] = useState(false);
   const [connectionAttempts, setConnectionAttempts] = useState(0);
@@ -211,8 +213,8 @@ export const Consola = () => {
           <br />
           <span className="parryText">
             PARRY: Vaya, eso ha tenido que doler. Esta información es bastante
-            interesante ¿No os parece? WeizembaunReport.jpg
-          </span>
+            interesante ¿No os parece?
+          </span> <a href="#" onClick={handleOpenReportModal}>WeizembaunReport.jpg</a>
           <br />
           ELIZA: La conexión ha fallado. Por favor, vuelva a introducir el
           comando:
@@ -254,6 +256,10 @@ export const Consola = () => {
       { type: "eliza", message: connectionMessage },
     ]);
   };
+
+  const handleOpenReportModal = () => {
+    setShowModalReport(true);
+  }
 
   const handleUnknownCommand = () => {
     const errorMessage =
@@ -342,7 +348,10 @@ export const Consola = () => {
         <ModalNewspaper onClose={() => setShowModalNewspaper(false)} />
       )}
       {showModalBeforeAfter && (
-        <ModalBeforeAfter onClose={() => setShowModalBBeforeAfter(false)} />
+        <ModalBeforeAfter onClose={() => setShowModalBeforeAfter(false)} />
+      )}
+      {showModalReport && (
+        <ModalReport onClose={() => setShowModalReport(false)} />
       )}
     </div>
   );
