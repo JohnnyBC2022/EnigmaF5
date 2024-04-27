@@ -7,7 +7,7 @@ export  const HumanityWins = () => {
     const navigate = useNavigate();
 
     const handleButtonClick = () => {
-      navigate("/instrucciones");/*vinculado a instrucciones como prueba*/
+      navigate("/finalquestions");/*vinculado a instrucciones como prueba*/
     }
   return (
     <div className="humanityWins__container">

@@ -63,16 +63,15 @@ export const Consola = () => {
       handleParryMention();
     } else if (command.toLowerCase().includes("eliza:new-theme")) {
       handleNewTheme();
-    } else if (command.toLowerCase() === "admin:proj3ct.m4c") {
+    } else if (command.toLowerCase() === "admin: pr0j3ct.m4c") {
       handleAdminAccess();
     } else if (command.toLowerCase().includes("eliza.(arpanet)$hello world$")) {
       handleArpanetConnection();
     } else if (command.toLowerCase() === "eliza.(delete.(force))") {
       navigate("/humanitywins");
     } else if (command.toLowerCase() === "parry:off"){
-      navigate("/fatalerror")
-    }
-    else {
+      navigate("/fatalerror");
+    } else {
       handleUnknownCommand();
     }
   };
