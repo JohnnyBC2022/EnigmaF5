@@ -116,7 +116,7 @@ Link to the User Journey and UI prototype.
 # Credits
 <p>
     <a href ="https://github.com/JohnnyBC2022" style="color: white; display:flex; align-items:center; gap:7px;">
-        <img src="frontend/public/github.png" width="21" height="21" alt="Github" style="max-width: 100%;"> Jonhatan Baragaño
+        <img src="frontend/public/github.png" width="21" height="21" alt="Github" style="max-width: 100%;"> Jonathan Baragaño
     </a>
 </p>
 <p>
@@ -134,9 +134,5 @@ Link to the User Journey and UI prototype.
         <img src="frontend/public/github.png" width="21" height="21" alt="Github" style="max-width: 100%;"> Olaya Sánchez
     </a>
 </p>
-<p>
-    <a href ="https://github.com/Emilly3008"  style="color: white; display:flex; align-items:center; gap:7px;">
-        <img src="frontend/public/github.png" width="21" height="21" alt="Github" style="max-width: 100%;"> Emily Sena
-    </a>
-</p>
+
 
