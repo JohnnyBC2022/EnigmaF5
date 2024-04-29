@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/questions")
-@CrossOrigin("http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173", "https://enigmaf5.vercel.app/"})
 public class QuestionController {
 
     private final QuestionService questionService;
