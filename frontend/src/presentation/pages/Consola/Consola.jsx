@@ -7,7 +7,7 @@ import ModalNewspaper from "../../components/ModalNewspaper/ModalNewspaper";
 import ModalBeforeAfter from "../../components/ModalBeforeAfter/ModalBeforeAfter";
 import ModalReport from "../../components/ModalReport/ModalReport";
 import ModalLastPage from "../../components/ModalLastPage/ModalLastPage";
-import {ProgressBar} from "../../components/ProgressBar/ProgressBar";
+import { ProgressBar } from "../../components/ProgressBar/ProgressBar";
 import { ProgressBar2 } from "../../components/ProgressBar/ProgressBar2";
 import { useNavigate } from "react-router-dom";
 
@@ -32,20 +32,17 @@ export const Consola = () => {
   const handleInputSubmit = (event) => {
     event.preventDefault();
 
-    // Almacenar el mensaje del usuario en el historial
     setMessageHistory((prevHistory) => [
       ...prevHistory,
       { type: "user", message: inputValue },
     ]);
 
-    // Lógica para manejar el comando ingresado
     if (conversationStarted) {
       handleConversation(inputValue);
     } else {
       handleCommand(inputValue);
     }
 
-    // Limpiar el valor del input
     setInputValue("");
   };
 
@@ -59,7 +56,6 @@ export const Consola = () => {
   };
 
   const handleCommand = (command) => {
-    // Lógica para manejar los comandos ingresados
     if (command === "eliza mad-slip:run") {
       handleElizaStart();
     } else if (
@@ -74,13 +70,13 @@ export const Consola = () => {
       handleParryMention();
     } else if (command.toLowerCase().includes("eliza:new-theme")) {
       handleNewTheme();
-    } else if (command.toLowerCase() === "admin: pr0j3ct.m4c") {
+    } else if (command.toLowerCase().includes(".m4c")) {
       handleAdminAccess();
     } else if (command.toLowerCase().includes("eliza.(arpanet)$hello world$")) {
       handleArpanetConnection();
     } else if (command.toLowerCase() === "eliza.(delete.(force))") {
       navigate("/humanitywins");
-    } else if (command.toLowerCase() === "parry:off"){
+    } else if (command.toLowerCase() === "parry:off") {
       navigate("/fatalerror");
     } else {
       handleUnknownCommand();
@@ -169,8 +165,8 @@ export const Consola = () => {
         <span className="elizaText">
           ELIZA: Le facilito las instrucciones para modificar mi configuración:
           <a href="#" onClick={handleBeforeAfterClick}>
-          "ELIZA_config-manual"
-        </a>
+            "ELIZA_config-manual"
+          </a>
         </span>
       </span>
     );
@@ -197,10 +193,8 @@ export const Consola = () => {
   };
 
   const handleArpanetConnection = () => {
-    // Incrementar el contador de intentos
     setConnectionAttempts(connectionAttempts + 1);
 
-    // Definir el mensaje a mostrar
     let connectionMessage;
     if (connectionAttempts === 0) {
       connectionMessage = (
@@ -218,7 +212,10 @@ export const Consola = () => {
           <span className="parryText">
             PARRY: Vaya, eso ha tenido que doler. Esta información es bastante
             interesante ¿No os parece?
-          </span> <a href="#" onClick={handleOpenModalReport}>WeizembaunReport.jpg</a>
+          </span>{" "}
+          <a href="#" onClick={handleOpenModalReport}>
+            WeizembaunReport.jpg
+          </a>
           <br />
           ELIZA: La conexión ha fallado. Por favor, vuelva a introducir el
           comando:
@@ -238,9 +235,10 @@ export const Consola = () => {
           <br />
           <span className="parryText">
             PARRY: Eliza, creo que se te ha caído esto:
-            <a href="#" onClick={handleOpenModalLastPage}>FINAL-ELIZA_config-manual.</a>
-             Curioso que omitieses esa parte del
-            manual, ¿verdad?
+            <a href="#" onClick={handleOpenModalLastPage}>
+              FINAL-ELIZA_config-manual.
+            </a>
+            Curioso que omitieses esa parte del manual, ¿verdad?
           </span>
           <br />
           ELIZA: La conexión se ha interrumpido demasiadas veces. Es necesario
@@ -255,7 +253,6 @@ export const Consola = () => {
       );
     }
 
-    // Mostrar el mensaje en el historial
     setMessageHistory((prevHistory) => [
       ...prevHistory,
       { type: "eliza", message: connectionMessage },
@@ -264,10 +261,10 @@ export const Consola = () => {
 
   const handleOpenModalReport = () => {
     setShowModalReport(true);
-  }
+  };
   const handleOpenModalLastPage = () => {
     setShowModalLastPage(true);
-  }
+  };
 
   const handleUnknownCommand = () => {
     const errorMessage =
@@ -283,8 +280,6 @@ export const Consola = () => {
   };
 
   const handleConversation = (input) => {
-    // Lógica para manejar la conversación con Eliza y Parry
-
     const conversation = [
       "Eliza: Gracias a mi alta capacidad de procesamiento lógico le puedo ayudar en la toma de decisiones.",
       "Parry: Demasiado lógico para mi gusto.",
@@ -293,7 +288,6 @@ export const Consola = () => {
       "Disculpe las interrupciones de Parry, es un bug de mi código fuente que aún queda por arreglar. ¿De qué quiere hablar hoy? Introduzca el comando correcto eliza:new-theme(su tema)",
     ];
 
-    // Almacenar cada mensaje de la conversación en el historial
     conversation.forEach((message, index) => {
       setMessageHistory((prevHistory) => [
         ...prevHistory,
@@ -301,7 +295,6 @@ export const Consola = () => {
       ]);
     });
 
-    // Resetear el estado de la conversación
     setConversationStarted(false);
   };
 
@@ -331,15 +324,24 @@ export const Consola = () => {
         onCloseModalFile1={() => setShowModalFile1(false)}
         onCloseModalFile2={() => setShowModalFile2(false)}
       />
-      {/* Historial de mensajes */}
+
       <div className="consoleHistory">
         {messageHistory.map((message, index) => (
-          <p key={index} className={`message ${message.type === "eliza" ? "elizaText" : message.type === "parry" ? "parryText" : "userMessage"}`}>
-          {message.message}
-        </p>
+          <p
+            key={index}
+            className={`message ${
+              message.type === "eliza"
+                ? "elizaText"
+                : message.type === "parry"
+                ? "parryText"
+                : "userMessage"
+            }`}
+          >
+            {message.message}
+          </p>
         ))}
       </div>
-      {/* Entrada de usuario */}
+
       <form onSubmit={handleInputSubmit} className="consoleInputContainer">
         <label className="consoleLabel">c:\&gt;</label>
         <input

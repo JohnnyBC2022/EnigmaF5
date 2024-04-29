@@ -4,7 +4,7 @@ import Report from "../../assets/images/weizembaumLetter.jpg";
 
 export default function ModalReport({ onClose }) {
   const handleCloseModal = () => {
-    onClose(); // Llamada a la función de cierre del modal
+    onClose();
   };
 
   return (

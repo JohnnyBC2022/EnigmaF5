@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import './AudioPlayer.css';
+import "./AudioPlayer.css";
 
 export const AudioPlayer = () => {
   useEffect(() => {
@@ -15,7 +15,15 @@ export const AudioPlayer = () => {
 
   return (
     <div>
-      <iframe className="music titanic" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1797647674%3Fsecret_token%3Ds-Akvs8H6OxEX&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+      <iframe
+        className="music titanic"
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1797647674%3Fsecret_token%3Ds-Akvs8H6OxEX&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      ></iframe>
     </div>
   );
 };

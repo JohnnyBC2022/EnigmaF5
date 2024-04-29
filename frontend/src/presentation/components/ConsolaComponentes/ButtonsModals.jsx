@@ -1,6 +1,5 @@
-// FileButtons.js
 import React from "react";
-import "../../pages/Consola/Consola.css"
+import "../../pages/Consola/Consola.css";
 
 const ButtonsModals = ({ onFile1Click, onFile2Click }) => {
   return (

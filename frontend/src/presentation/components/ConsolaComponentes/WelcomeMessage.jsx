@@ -1,6 +1,5 @@
-// WelcomeMessage.js
 import React from "react";
-import "../../pages/Consola/Consola.css"
+import "../../pages/Consola/Consola.css";
 
 const WelcomeMessage = () => {
   return (

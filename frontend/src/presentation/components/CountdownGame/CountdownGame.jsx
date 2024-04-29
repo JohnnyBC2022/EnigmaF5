@@ -8,7 +8,7 @@ export const CountdownGame = () => {
     const savedTime = localStorage.getItem("remainingTime");
     return savedTime ? parseInt(savedTime, 10) : 3600000;
   });
-  
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       setRemainingTime((prevRemainingTime) =>
@@ -24,7 +24,7 @@ export const CountdownGame = () => {
   }, [remainingTime]);
 
   const location = useLocation();
-if (location.pathname.toString() === "/finalquestions") return null;
+  if (location.pathname.toString() === "/finalquestions") return null;
 
   const Completionist = () => (
     <div className="countdownComplete">
@@ -41,7 +41,7 @@ if (location.pathname.toString() === "/finalquestions") return null;
     const remainingHours = Math.floor(remainingTime / 3600000);
     const remainingMinutes = Math.floor((remainingTime % 3600000) / 60000);
     const remainingSeconds = Math.floor((remainingTime % 60000) / 1000);
-    
+
     const isCompleted = remainingTime === 0;
 
     if (isCompleted) {
@@ -49,7 +49,7 @@ if (location.pathname.toString() === "/finalquestions") return null;
     } else {
       return (
         <span>
-        {remainingHours}:{remainingMinutes}:{remainingSeconds}
+          {remainingHours}:{remainingMinutes}:{remainingSeconds}
         </span>
       );
     }

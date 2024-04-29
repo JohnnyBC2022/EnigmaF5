@@ -5,12 +5,14 @@
 
 @font-face {
   font-family: "ThroughTheNight";
-  src: url("../src/presentation/assets/fonts/ThroughTheNight.regular.ttf") format("truetype");
+  src: url("../src/presentation/assets/fonts/ThroughTheNight.regular.ttf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "DotGothic";
-  src: url("../src/presentation/assets/fonts/DotGothic16-Regular.ttf") format("truetype");
+  src: url("../src/presentation/assets/fonts/DotGothic16-Regular.ttf")
+    format("truetype");
 }
 
 * {
@@ -30,9 +32,9 @@ html {
 :root {
   --black: #242424;
   --black-console: #0e0f0f;
-  --blue-console: #06A094;
+  --blue-console: #06a094;
   --green-console: #42ae44;
-  --red-console: #FF5959;
+  --red-console: #ff5959;
   --white: #ffffff;
   --grey: #d9d9d9;
   --dark-red: #993f2a;

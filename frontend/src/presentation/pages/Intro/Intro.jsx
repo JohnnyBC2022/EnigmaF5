@@ -14,7 +14,7 @@ export const Intro = () => {
   return (
     <div className="mainIntro">
       <div className="paper">
-        <img src="./logoEnigma.svg" alt="Enigma Logo"  className="logo"/>
+        <img src="./logoEnigma.svg" alt="Enigma Logo" className="logo" />
         <button onClick={handleStartButtonClick} className="startBtn">
           empezar
         </button>

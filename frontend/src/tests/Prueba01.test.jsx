@@ -18,19 +18,18 @@ test("If password is not correct you recieve an error message ", () => {
   expect(getByText("* Respuesta incorrecta")).toBeInTheDocument();
 });
 
-
 test("If password is correct you get send to next page ", () => {
-    const { getByLabelText, getByText } = render(
-      <Router>
-        <Prueba01 />
-      </Router>
-    );
-  
-    const input = getByLabelText("Introducid vuestra respuesta:");
-  
-    fireEvent.change(input, { target: { value: "enigma" } });
-  
-    fireEvent.click(getByText("ENVIAR"));
-  
-    expect(window.location.pathname).toBe("/eliza-error");
-  });
+  const { getByLabelText, getByText } = render(
+    <Router>
+      <Prueba01 />
+    </Router>
+  );
+
+  const input = getByLabelText("Introducid vuestra respuesta:");
+
+  fireEvent.change(input, { target: { value: "enigma" } });
+
+  fireEvent.click(getByText("ENVIAR"));
+
+  expect(window.location.pathname).toBe("/eliza-error");
+});

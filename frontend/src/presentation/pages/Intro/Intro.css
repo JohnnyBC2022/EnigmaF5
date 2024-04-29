@@ -63,7 +63,7 @@
   align-self: flex-end;
 }
 
-.logo{
+.logo {
   width: 70%;
   margin: 0 auto;
 }
@@ -129,8 +129,6 @@
 .paperContain button {
   margin-top: 7rem;
 }
-
-
 
 @media screen and (min-width: 1600px) {
   .paper h1 {

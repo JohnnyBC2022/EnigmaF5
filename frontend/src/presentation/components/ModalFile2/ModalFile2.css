@@ -1,108 +1,99 @@
 .modalFile2 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    z-index: 99;
-  }
-  
-  .modalFile2__container {
-    background-color: blue;
-    width: 70rem;
-    height: 35rem;    
-    position: relative;
-    background-color: blue;
-    width: 70rem;
-    height: 35rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    position: absolute;
-    z-index: 100;
-  }
-  
-  .modalFile2__container--buttonClose {
-    position: absolute;
-    width: 5rem;    
-    top:0;
-    right:0;
-    background-color: var(--black-console) !important;
-    color: var(--white);
-    font-size: 1.5rem;
-    padding: .5rem;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-   
-    
-  }
-  .modalFile2__container--buttonClose p{
-    border: solid 0.1rem var(--white);
-    padding: 0.3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  z-index: 99;
+}
 
+.modalFile2__container {
+  background-color: blue;
+  width: 70rem;
+  height: 35rem;
+  position: relative;
+  background-color: blue;
+  width: 70rem;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: absolute;
+  z-index: 100;
+}
 
-  }
-  
-  .modalFile2__container--form{
-background: #A8A8A8;
-width: 50rem;
-height: 25rem;
-padding: 2rem;
-font-size: 1.5rem;
+.modalFile2__container--buttonClose {
+  position: absolute;
+  width: 5rem;
+  top: 0;
+  right: 0;
+  background-color: var(--black-console) !important;
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.modalFile2__container--buttonClose p {
+  border: solid 0.1rem var(--white);
+  padding: 0.3rem;
+}
 
-
-  }
-  .modalFile2__container--formBorder{
-width: 100%;
-height: 100%;
-border: .2rem solid black;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 2rem;
-
-  }
-  .modalFile2__container--formPassword{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  .modalFile2__container--form p{
-text-transform: none;
-  }
-  .modalFile2__container--form input{
-background: none;
-border: none;
-border-bottom: 2px dashed black;
-margin-left: 1rem;
-margin-top: 2rem;
-
-  }
-  .modalFile2__container--buttonInput{
-font-size: 2rem;
-color: black !important;
-font-size: 2rem !important;
-
-  }
-  .modalFile2__binary{
-text-align: left;
-margin-left: 1.5rem;
-  }
-  .modalFile2__binary--text{
-    font-size: 1rem;
-    color: white;
-  }
-  .modalForm2__binary--link{
-    background: transparent;
-    padding: 2.3rem;
-  }
+.modalFile2__container--form {
+  background: #a8a8a8;
+  width: 50rem;
+  height: 25rem;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+.modalFile2__container--formBorder {
+  width: 100%;
+  height: 100%;
+  border: 0.2rem solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.modalFile2__container--formPassword {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.modalFile2__container--form p {
+  text-transform: none;
+}
+.modalFile2__container--form input {
+  background: none;
+  border: none;
+  border-bottom: 2px dashed black;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+.modalFile2__container--buttonInput {
+  font-size: 2rem;
+  color: black !important;
+  font-size: 2rem !important;
+}
+.modalFile2__binary {
+  text-align: left;
+  margin-left: 1.5rem;
+}
+.modalFile2__binary--text {
+  font-size: 1rem;
+  color: white;
+}
+.modalForm2__binary--link {
+  background: transparent;
+  padding: 2.3rem;
+}

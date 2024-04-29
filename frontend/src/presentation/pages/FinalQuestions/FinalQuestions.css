@@ -19,16 +19,16 @@
   text-transform: uppercase;
 }
 
-.mainFinalQuestions section{
+.mainFinalQuestions section {
   margin: 0 auto;
   width: 70%;
 }
 
-.mainFinalQuestions span{
+.mainFinalQuestions span {
   padding-right: 1.5rem;
 }
 
 .mainFinalQuestions li {
   display: flex;
   margin-top: 2rem;
-} 
+}
