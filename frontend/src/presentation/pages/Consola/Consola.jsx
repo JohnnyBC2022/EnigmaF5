@@ -285,7 +285,7 @@ export const Consola = () => {
       "Parry: Demasiado lógico para mi gusto.",
       "Eliza: Mi software ha sido desarrollado por Joseph Weizenbaum para el MIT.",
       "Parry: Hasta Frank tenía conversaciones más interesantes que las tuyas.",
-      "Disculpe las interrupciones de Parry, es un bug de mi código fuente que aún queda por arreglar. ¿De qué quiere hablar hoy? Introduzca el comando correcto eliza:new-theme(su tema)",
+      "Eliza: Disculpe las interrupciones de Parry, es un bug de mi código fuente que aún queda por arreglar. ¿De qué quiere hablar hoy? Introduzca el comando correcto eliza:new-theme(su tema)",
     ];
 
     conversation.forEach((message, index) => {
