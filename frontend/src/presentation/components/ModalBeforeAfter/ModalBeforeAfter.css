@@ -9,12 +9,12 @@
 }
 
 .before-after-slider {
-    width: 60rem;
+    width: 120rem;
     position: relative;
   }
   .before-after-slider__first-photo-container,
   .before-after-slider__second-photo-container {
-    width: 60rem;
+    width: 120rem;
     overflow: hidden;
   }
   .before-after-slider__second-photo-container {
