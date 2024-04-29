@@ -1,6 +1,6 @@
 INSERT INTO questions (id, question) VALUES
-(1, 'Las aportaciones de Alan Turing a la computaciÃ³n van mÃ¡s allÃ¡ de la mÃ¡quina Bombe. De hecho, diseÃ±Ã³ un experimento que lleva su nombre: el â€œTest de Turingâ€. Â¿SabÃ©is en quÃ© consiste y para quÃ© se utiliza?' ),
-(2, 'Â¿QuiÃ©n era Joseph Weizenbaum? Â¿QuÃ© creÃ©is que ha aportado a la computaciÃ³n?'),
-(3, 'En una de las pruebas habÃ©is tenido que traducir un texto conformado por unos y ceros Â¿CÃ³mo se llama este tipo de codificaciÃ³n? Â¿En quÃ© consiste?'),
-(4, 'Durante el juego habÃ©is visto una conversaciÃ³n ficcionada entre Eliza y Parry. Buscad informaciÃ³n sobre ellos y explicad quÃ© eran en realidad.'),
-(5, 'En la prueba final habÃ©is tenido que tomar una decisiÃ³n: desconectar a Eliza o a Parry. Poned en comÃºn por quÃ© y cÃ³mo habÃ©is tomado esa decisiÃ³n.');
+(1, 'Las aportaciones de Alan Turing a la computación van más allá de la máquina Bombe. De hecho, diseñó un experimento que lleva su nombre: el Test de Turing. ¿Sabéis en qué consiste y para qué se utiliza?' ),
+(2, '¿Quién era Joseph Weizenbaum? ¿Qué creéis que ha aportado a la computación?'),
+(3, 'En una de las pruebas habéis tenido que traducir un texto conformado por unos y ceros ¿Cómo se llama este tipo de codificación? ¿En qué consiste?'),
+(4, 'Durante el juego habéis visto una conversación ficcionada entre Eliza y Parry. Buscad información sobre ellos y explicad qué eran en realidad.'),
+(5, 'En la prueba final habéis tenido que tomar una decisión: desconectar a Eliza o a Parry. Poned en común por qué y cómo habéis tomado esa decisión.');
