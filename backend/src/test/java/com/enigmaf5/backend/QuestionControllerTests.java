@@ -45,6 +45,4 @@ public class QuestionControllerTests {
                 .andExpect(jsonPath("$[1].id").value(2));
 
     }
-
-    
 }

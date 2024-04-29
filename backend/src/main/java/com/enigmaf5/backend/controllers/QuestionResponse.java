@@ -6,7 +6,7 @@ public class QuestionResponse {
     private Long id;
     private String question;
 
-    public QuestionResponse(Long id, String question){
+    public QuestionResponse(Long id, String question) {
         this.id = id;
         this.question = question;
     }
@@ -19,7 +19,7 @@ public class QuestionResponse {
         return question;
     }
 
-    public static QuestionResponse from(Question question){
+    public static QuestionResponse from(Question question) {
         return new QuestionResponse(question.getId(), question.getQuestion());
     }
 }

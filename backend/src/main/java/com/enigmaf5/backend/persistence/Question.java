@@ -11,13 +11,13 @@ public class Question {
     private Long id;
     private String question;
 
-    public Question(Long id, String question){
+    public Question(Long id, String question) {
         this.id = id;
         this.question = question;
     }
 
-    public Question(){}
-
+    public Question() {
+    }
 
     public Long getId() {
         return id;

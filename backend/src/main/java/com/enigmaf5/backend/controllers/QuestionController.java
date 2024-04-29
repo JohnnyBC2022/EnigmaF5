@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/api/questions")
 @CrossOrigin("http://localhost:5173")
 public class QuestionController {
-    
+
     private final QuestionService questionService;
 
     public QuestionController(@Autowired QuestionService questionService) {
@@ -22,7 +22,7 @@ public class QuestionController {
     }
 
     @GetMapping
-    public List<QuestionResponse> getAllQuestions(){
+    public List<QuestionResponse> getAllQuestions() {
         return questionService.getAllQuestions();
     }
 }
